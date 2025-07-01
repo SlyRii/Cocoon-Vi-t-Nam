@@ -1,0 +1,192 @@
+/* PHẦN CHÍNH TRANG THANH TOÁN */
+.checkout-container {
+  max-width: 800px;
+  margin: 40px auto;
+  padding: 30px;
+  background-color: #fff9f2;
+  border-radius: 10px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+}
+
+.checkout-container h2 {
+  font-size: 24px;
+  color: #6b4e2e;
+  margin-bottom: 20px;
+}
+
+.checkout-form .form-group {
+  margin-bottom: 20px;
+}
+
+.checkout-form label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.checkout-form input,
+.checkout-form textarea,
+.checkout-form select {
+  width: 100%;
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 5px;
+}
+
+.checkout-form button {
+  background-color: #8c6239;
+  color: white;
+  padding: 12px 25px;
+  border: none;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+  margin-top: 10px;
+  transition: background 0.3s ease;
+}
+
+.checkout-form button:hover {
+  background-color: #a4703a;
+}
+/* Modal xem chi tiết sản phẩm */
+#product-detail-modal {
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, 0.5);
+  display: none;
+  align-items: center;
+  justify-content: center;
+  z-index: 1500;
+}
+
+#product-detail-modal.show {
+  display: flex;
+}
+
+#product-detail-content {
+  background: #fff;
+  padding: 2em;
+  border-radius: 10px;
+  max-width: 500px;
+  width: 90%;
+  position: relative;
+  box-shadow: 0 4px 20px rgba(0,0,0,0.3);
+}
+
+/* Nút đóng ở góc phải trên */
+#product-detail-content .close-btn {
+  position: absolute;
+  top: 0.5em;
+  right: 0.5em;
+  background: transparent;
+  border: none;
+  font-size: 1.5em;
+  cursor: pointer;
+  color: red 
+}
+
+/* --- Kiểu dáng cho thông báo Đặt hàng thành công --- */
+.order-success-message {
+    max-width: 600px;
+    margin: 60px auto;
+    padding: 40px;
+    background-color: #fff;
+    border-radius: 12px;
+    box-shadow: 0 8px 20px rgba(0, 0, 0, 0.15);
+    text-align: center;
+    line-height: 1.6;
+    animation: fadeInScale 0.7s ease-out forwards; /* Thêm animation */
+}
+
+.order-success-message.hidden {
+    display: none;
+}
+
+.order-success-message .success-icon {
+    font-size: 5em; /* Kích thước icon lớn */
+    color: #28a745; /* Màu xanh lá cây cho icon thành công */
+    margin-bottom: 20px;
+}
+
+.order-success-message h3 {
+    font-size: 2.5em;
+    color: #28a745;
+    margin-bottom: 15px;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+
+.order-success-message p {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 10px;
+}
+
+.order-success-message #orderIdDisplay {
+    font-weight: 700;
+    color: #cfaf8c; /* Màu thương hiệu cho mã đơn hàng */
+    font-size: 1.2em;
+}
+
+.order-success-message .back-to-home-btn {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 25px;
+    background-color: #cfaf8c;
+    color: white;
+    text-decoration: none;
+    border-radius: 8px;
+    font-size: 1.1em;
+    font-weight: 600;
+    transition: background-color 0.3s ease, transform 0.2s ease, box-shadow 0.3s ease;
+}
+
+.order-success-message .back-to-home-btn:hover {
+    background-color: #c09f7a;
+    transform: translateY(-2px);
+    box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Animation cho thông báo thành công */
+@keyframes fadeInScale {
+    from {
+        opacity: 0;
+        transform: scale(0.9);
+    }
+    to {
+        opacity: 1;
+        transform: scale(1);
+    }
+}
+
+/* Kiểu dáng cho container QR Code */
+.qr-code-container {
+    margin: 25px auto;
+    padding: 15px;
+    background-color: #f0f0f0;
+    border-radius: 8px;
+    border: 1px solid #e5e5e5;
+    text-align: center;
+    max-width: 250px; /* Giới hạn chiều rộng tối đa của container QR */
+}
+
+.qr-code-container h4 {
+    font-size: 1.1em;
+    color: #555;
+    margin-bottom: 15px;
+}
+
+.qr-image {
+    width: 100%; /* Đảm bảo hình ảnh vừa với container */
+    max-width: 200px; /* Kích thước tối đa của ảnh QR */
+    height: auto;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.bank-info {
+      font-size: 0.9 em;
+    display: flex;
+    align-items: center;
+}

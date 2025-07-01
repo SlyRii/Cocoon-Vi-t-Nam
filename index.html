@@ -1,0 +1,1459 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cocoon Việt Nam - Mỹ phẩm thiên nhiên</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#cfaf8c',
+            secondary: '#cfaf8c',
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body class="bg-gray-50">
+  <!-- Nội dung trang web -->
+  <!-- Được giữ nguyên từ file gốc, sẽ được nối vào đây -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Header -->f
+ <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center">
+  
+   <!-- Logo -->
+     <a href="index.html" class="block w-[120px] md:w-[150px]">
+  <img src="images/cocoon.jpg" alt="Cocoon Việt Nam" class="w-full h-auto object-contain" />
+</a>
+      <!-- Menu -->
+<nav class="hidden md:flex space-x-10 ml-10">
+<a href="sanpham.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Sản phẩm</a>
+<a href="news.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Tin tức</a>
+<a href="about.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Về chúng tôi</a>
+<a href="contact.html" class="header-link text-gray-800 hover:text-primary relative hover-underline font-medium">Liên hệ</a>
+</nav>
+
+<!-- Search -->
+</div>
+
+<div class="flex items-center space-x-6">
+<div class="relative">
+<input type="text" class="search-expand pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:bg-white focus:outline-none" placeholder="Tìm kiếm...">
+        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+            <i class="ri-search-line"></i>
+        </div>
+    </div>
+  <!-- Language Switch -->
+ <div class="language-switch">
+<div class="flex items-center space-x-1 text-gray-700">
+<span>VN</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+  <!-- Dropdown (optional) -->
+        <!-- <div class="language-options absolute mt-2 bg-white shadow p-2 rounded hidden">
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">Tiếng Việt</div>
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">English</div>
+        </div> -->
+  </div>
+ <div class="language-options p-2 w-24">
+             <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  VN</div>
+
+<div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  English </div>
+
+            </div>
+        </div>
+
+    <!-- Giỏ hàng -->
+<a href="#" class="hidden md:flex items-center space-x-1 text-gray-700 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-shopping-bag-line"></i>
+</div>
+<span class="font-medium cursor-pointer" onclick="toggleCart()">Giỏ hàng</span
+<!--start liên kết login.html nè-->
+<a href="login.html" class="hidden md:block bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 rounded-button hover:shadow-lg transition-all duration-300 whitespace-nowrap">Đăng nhập</a>
+<!--liên kết login.html nè end-->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobileMenuBtn">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-end space-x-4">
+
+</div>
+</div>
+</header>
+<!-- Hero Section -->
+<section class="pt-24 relative overflow-hidden bg-cover bg-center" style="background-image: url('https://readdy.ai/api/search-image?query=Modern%20minimalist%20skincare%20products%20display%20with%20green%20plants%20and%20white%20background%2C%20clean%20aesthetic%2C%20luxury%20organic%20cosmetics%20presentation%20with%20soft%20lighting%20and%20shadows%2C%20professional%20product%20photography&width=1920&height=1080&seq=hero1&orientation=landscape');">
+<div class="absolute inset-0 bg-gradient-to-r from-black/40 to-transparent"></div>
+<div class="container mx-auto px-4 py-20 md:py-32 relative z-10">
+<div class="max-w-3xl">
+<h1 class="text-4xl md:text-5xl font-bold text-white mb-6 typing-animation">Mỹ phẩm thiên nhiên từ Việt Nam</h1>
+<p class="text-lg md:text-xl text-white/90 mb-8">Khám phá bí mật làm đẹp từ thiên nhiên với các sản phẩm chăm sóc da được chiết xuất từ nguyên liệu tự nhiên, an toàn và hiệu quả.</p>
+<div class="flex flex-col sm:flex-row space-y-4 sm:space-y-0 sm:space-x-4">
+<a href="#" class="bg-primary text-white px-10 py-4 rounded-button text-center font-medium hover:bg-primary/90 hover:scale-105 transform transition-all duration-300 whitespace-nowrap !rounded-button">Khám phá ngay</a>
+<a href="#" class="bg-white/90 backdrop-blur-sm text-primary px-10 py-4 rounded-button text-center font-medium hover:bg-white hover:scale-105 transform transition-all duration-300 whitespace-nowrap !rounded-button">Tìm hiểu thêm</a>
+</div>
+<div class="flex items-center space-x-6 mt-12">
+<a href="#" class="text-white hover:text-primary transition-all duration-300">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-facebook-fill text-xl"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-primary transition-all duration-300">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-instagram-line text-xl"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-primary transition-all duration-300">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-youtube-line text-xl"></i>
+</div>
+</a>
+<a href="#" class="text-white hover:text-primary transition-all duration-300">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-tiktok-line text-xl"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+<div class="absolute bottom-8 left-1/2 transform -translate-x-1/2 text-white bounce">
+<div class="w-8 h-8 flex items-center justify-center">
+<i class="ri-arrow-down-line text-2xl"></i>
+</div>
+</div>
+</section>
+<!-- Features Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Tại sao chọn Cocoon?</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Chúng tôi cam kết mang đến những sản phẩm chăm sóc da chất lượng cao, được chiết xuất từ thiên nhiên Việt Nam.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-10">
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center fade-in">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-leaf-line text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4">100% Thiên Nhiên</h3>
+<p class="text-gray-600">Sản phẩm được chiết xuất từ các thành phần tự nhiên, không chứa hóa chất độc hại, an toàn cho mọi loại da.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center fade-in" style="animation-delay: 0.2s;">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-recycle-line text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4">Thân Thiện Môi Trường</h3>
+<p class="text-gray-600">Bao bì tái chế, quy trình sản xuất xanh và cam kết bảo vệ môi trường trong mọi hoạt động.</p>
+</div>
+<div class="bg-white p-8 rounded-lg shadow-sm border border-gray-100 text-center fade-in" style="animation-delay: 0.4s;">
+<div class="w-16 h-16 bg-primary/10 rounded-full flex items-center justify-center mx-auto mb-6">
+<div class="w-8 h-8 flex items-center justify-center text-primary">
+<i class="ri-heart-line text-2xl"></i>
+</div>
+</div>
+<h3 class="text-xl font-semibold mb-4">Không Thử Nghiệm Động Vật</h3>
+<p class="text-gray-600">Chúng tôi cam kết không thử nghiệm sản phẩm trên động vật và ủng hộ các phương pháp thử nghiệm thay thế.</p>
+</div>
+</div>
+</div>
+</section>
+<!-- Products Section -->
+<section class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Sản Phẩm Nổi Bật</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Khám phá các sản phẩm chăm sóc da được yêu thích nhất từ Cocoon.</p>
+</div>
+<div class="flex justify-center mb-10">
+<div class="relative inline-flex bg-white rounded-full p-1 shadow-sm" id="productTabs">
+<button class="px-6 py-2 rounded-full text-white bg-primary tab-button active whitespace-nowrap" data-tab="all">Tất cả</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="face">Chăm sóc mặt</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="body">Chăm sóc cơ thể</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="hair">Chăm sóc tóc</button>
+</div>
+</div>
+<!-- Sản phẩm mục tất cả-->
+<div class="tab-content active" id="all">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/serum vitamin c.jpg" alt="Serum Dưỡng Da" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc mặt</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Serum Vitamin C Sáng Da</h3>
+<p class="text-gray-600 text-sm mb-4">Serum dưỡng da chứa 10% Vitamin C tinh khiết, giúp làm sáng da, mờ thâm nám và chống oxy hóa hiệu quả.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">429.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">529.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/tẩy da chết toàn thân.jpg" alt="Tẩy Tế Bào Chết" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc cơ thể</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Tẩy Tế Bào Chết Cà Phê Đắk Lắk</h3>
+<p class="text-gray-600 text-sm mb-4">Tẩy tế bào chết toàn thân từ hạt cà phê Đắk Lắk, dầu dừa Bến Tre và đường mía, giúp làm sạch sâu và nuôi dưỡng da.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">279.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">349.000 ₫</span>
+</div>
+</div>
+</div>
+
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/mặt nạ ủ tóc.webp" alt="Mặt Nạ Tóc" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc tóc</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Mặt Nạ Ủ Tóc Bưởi Và Dừa</h3>
+<p class="text-gray-600 text-sm mb-4">Mặt nạ ủ tóc dưỡng chất từ tinh dầu vỏ bưởi và dầu dừa nguyên chất, giúp tóc chắc khỏe, giảm gãy rụng và kích thích mọc tóc.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">329.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">399.000 ₫</span>
+</div>
+</div>
+</div>
+
+</div>
+</div>
+<!--Sản phẩm mục chăm sóc mặt-->
+<div class="tab-content" id="face">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/serum vitamin c.jpg" alt="Serum Dưỡng Da" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc mặt</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Serum Vitamin C Sáng Da</h3>
+<p class="text-gray-600 text-sm mb-4">Serum dưỡng da chứa 10% Vitamin C tinh khiết, giúp làm sáng da, mờ thâm nám và chống oxy hóa hiệu quả.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">429.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">529.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/sưa rua mat bí dao.jpg" alt="Sữa Rửa Mặt Bí Đao" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc mặt</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Sữa Rửa Mặt Bí Đao</h3>
+<p class="text-gray-600 text-sm mb-4">Sữa rửa mặt chiết xuất từ bí đao, giúp làm sạch sâu, kiểm soát dầu và se khít lỗ chân lông.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">249.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">299.000 ₫</span>
+</div>
+</div>
+</div>
+<!--Sản phẩm mục chăm sóc cơ thể-->
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/mặt nạ đất sét.jpeg" alt="Mặt Nạ Đất Sét" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc mặt</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Mặt Nạ Đất Sét</h3>
+<p class="text-gray-600 text-sm mb-4">Mặt nạ đất sét  kết hợp với nghệ vàng, giúp hút sạch độc tố, se khít lỗ chân lông và làm mịn da.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">299.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">359.000 ₫</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="body">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/tẩy da chết toàn thân.jpg" alt="Tẩy Tế Bào Chết" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc cơ thể</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Tẩy Tế Bào Chết Cà Phê Đắk Lắk</h3>
+<p class="text-gray-600 text-sm mb-4">Tẩy tế bào chết toàn thân từ hạt cà phê Đắk Lắk, dầu dừa Bến Tre và đường mía, giúp làm sạch sâu và nuôi dưỡng da.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">279.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">349.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/duong am.jpg" alt="Sáp dưỡng " class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc cơ thể</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<!--Sản phẩm mục chăm sóc tóc-->
+<h3 class="text-lg font-semibold mb-2">Sáp Dưỡng Ẩm Đa Năng Sen Hậu Giang 30ml</h3>
+<p class="text-gray-600 text-sm mb-4">Với sức mạnh của chiết xuất hoa sen, bơ hạt mỡ, madecassoside, vitamin B5, B12 và phức hợp dầu chưng cất phân tử Passioline và Soline, Sáp Dưỡng Ấm Đa Năng Sen Hậu Giang giúp dưỡng ẩm sâu, làm dịu tình trạng mẫn đỏ do khô da, mang lại làn da mềm mại, mịn màng.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">195.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">229.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/SUA TAM.png" alt="Gel tắm đường thốt nốt An Giang 500ml" class="w-full h-80 object-cover object-top">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc cơ thể</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Gel Tắm Đường Thốt Nốt An Giang 500ml</h3>
+<p class="text-gray-600 text-sm mb-4">Từ những tinh thể đường thốt nốt An Giang nhuyễn mịn giàu chất ngăn ngừa oxy hóa và khoáng chất, kết hợp cùng vitamin B5 và B3, gel tắm với hương thơm trái cây giúp làm sạch nhẹ nhàng, hỗ trợ bảo vệ hàng rào độ ẩm, giúp làn da luôn mềm mại và không bị khô sau khi tắm.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">219.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">379.000 ₫</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="hair">
+<div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/mặt nạ ủ tóc.webp">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc tóc</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Mặt Nạ Ủ Tóc Bưởi Và Dừa</h3>
+<p class="text-gray-600 text-sm mb-4">Mặt nạ ủ tóc dưỡng chất từ tinh dầu vỏ bưởi và dầu dừa nguyên chất, giúp tóc chắc khỏe, giảm gãy rụng và kích thích mọc tóc.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">329.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">399.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/dầu gội.jpg">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc tóc</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Dầu Gội Bưởi Refill Không Sulfate 500ml</h3>
+<p class="text-gray-600 text-sm mb-4">Từ tinh dầu vỏ bưởi Việt Nam truyền thống kết hợp với vitamin B5, hoạt chất dưỡng ẩm Xylishine™ cùng công thức dịu nhẹ không chứa sulfate, dầu gội bưởi giúp làm sạch tóc và giảm gãy rụng, mang lại mái tóc đen dày, chắc khoẻ và mượt mà.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">395.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">478.000 ₫</span>
+</div>
+</div>
+</div>
+<div class="product-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative">
+<img src="images/NƯỚC DƯỠNG.webp">
+<div class="product-overlay absolute inset-0 bg-black/30 flex items-center justify-center">
+<button class="bg-white text-primary px-4 py-2 rounded-button mx-2 ripple hover:bg-primary hover:text-white transition-all duration-300 whitespace-nowrap !rounded-button">Xem nhanh</button>
+<button class="bg-primary text-white px-4 py-2 rounded-button mx-2 ripple hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Thêm vào giỏ</button>
+</div>
+</div>
+<div class="p-6">
+<div class="flex justify-between items-center mb-2">
+<span class="text-sm text-primary font-medium">Chăm sóc tóc</span>
+<div class="flex">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-2">Nước Dưỡng Tóc Tinh Dầu Bưởi 310ml</h3>
+<p class="text-gray-600 text-sm mb-4">Sản phẩm treatment dành cho tóc, phù hợp với tình trạng tóc rụng, tóc yếu, tóc thưa mỏng. Sản phẩm có thành phần từ tinh dầu bưởi Việt Nam truyền thống, Xylishine, Vitamin B5, Baicapil và Bisabolol.</p>
+<div class="flex justify-between items-center">
+<span class="text-lg font-bold text-primary">379.000 ₫</span>
+<span class="text-sm text-gray-500 line-through">459.000 ₫</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+
+
+<div class="text-center mt-12">
+<a href="sanpham.html" class="inline-block bg-primary text-white px-8 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Xem tất cả sản phẩm</a>
+</div>
+</div>
+</section>
+<!-- Testimonials Section -->
+<section class="py-20 bg-white">
+<div class="container mx-auto px-4">
+<div class="text-center mb-16">
+<h2 class="text-3xl font-bold mb-4">Khách hàng nói gì về chúng tôi</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Những đánh giá chân thực từ khách hàng đã sử dụng sản phẩm Cocoon.</p>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20woman%20in%20her%2030s%20with%20long%20black%20hair%2C%20natural%20makeup%2C%20smiling%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=testimonial1&orientation=squarish" alt="Nguyễn Thị Minh Tâm" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold">Nguyễn Thị Minh Tâm</h4>
+<div class="flex mt-1">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Tôi đã dùng serum Vitamin C của Cocoon được 3 tháng và thấy da sáng lên rõ rệt. Các vết thâm mụn cũng mờ đi nhiều. Sản phẩm thẩm thấu nhanh, không gây nhờn rít và mùi hương rất dễ chịu. Chắc chắn sẽ tiếp tục sử dụng!"</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in" style="animation-delay: 0.2s;">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20Vietnamese%20man%20in%20his%2040s%20with%20short%20black%20hair%2C%20glasses%2C%20smiling%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=testimonial2&orientation=squarish" alt="Trần Văn Hùng" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold">Trần Văn Hùng</h4>
+<div class="flex mt-1">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-line"></i>
+</div>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Ban đầu tôi mua tẩy tế bào chết cà phê cho vợ, nhưng sau khi dùng thử, tôi cũng nghiện luôn. Da sạch và mềm hơn hẳn, mùi cà phê rất thơm và nam tính. Đây là sản phẩm đầu tiên tôi dùng của Cocoon và rất hài lòng với chất lượng."</p>
+</div>
+<div class="bg-gray-50 p-8 rounded-lg shadow-sm fade-in" style="animation-delay: 0.4s;">
+<div class="flex items-center mb-6">
+<div class="w-12 h-12 rounded-full overflow-hidden mr-4">
+<img src="https://readdy.ai/api/search-image?query=Professional%20headshot%20of%20a%20young%20Vietnamese%20woman%20in%20her%2020s%20with%20medium%20length%20black%20hair%2C%20natural%20makeup%2C%20smiling%2C%20neutral%20background%2C%20high%20quality%20portrait&width=100&height=100&seq=testimonial3&orientation=squarish" alt="Lê Thị Hương Giang" class="w-full h-full object-cover">
+</div>
+<div>
+<h4 class="font-semibold">Lê Thị Hương Giang</h4>
+<div class="flex mt-1">
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-fill"></i>
+</div>
+<div class="w-4 h-4 flex items-center justify-center text-yellow-400">
+<i class="ri-star-half-fill"></i>
+</div>
+</div>
+</div>
+</div>
+<p class="text-gray-600">"Mặt nạ ủ tóc bưởi và dừa đã cứu mái tóc hư tổn của tôi sau nhiều lần nhuộm. Tóc mềm mượt hơn, ít gãy rụng và mọc nhanh hơn. Tôi thích cách Cocoon sử dụng nguyên liệu Việt Nam và đóng gói thân thiện với môi trường."</p>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="review.html" class="inline-block bg-primary text-white px-8 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Xem thêm</a>
+</div>
+</div>
+</section>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Blog Section -->
+<section id="blog" class="py-20 bg-gray-50">
+<div class="container mx-auto px-4">
+<div class="text-center mb-12">
+<h2 class="text-3xl font-bold mb-4">Tin Tức & Bài Viết</h2>
+<p class="text-gray-600 max-w-2xl mx-auto">Cập nhật những thông tin mới nhất về làm đẹp, chăm sóc da và các hoạt động của Cocoon.</p>
+</div>
+<div class="flex justify-center mb-10">
+<div class="relative inline-flex bg-white rounded-full p-1 shadow-sm" id="blogTabs">
+<button class="px-6 py-2 rounded-full text-white bg-primary tab-button active whitespace-nowrap" data-tab="all-posts">Tất cả</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="skincare">Chăm sóc da</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="haircare">Chăm sóc tóc</button>
+<button class="px-6 py-2 rounded-full text-gray-700 tab-button whitespace-nowrap" data-tab="news">Tin tức</button>
+</div>
+</div>
+<div class="tab-content active" id="all-posts">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Woman%20applying%20natural%20face%20serum%2C%20skincare%20routine%2C%20close-up%20shot%20with%20soft%20lighting%2C%20beauty%20blogger%20demonstrating%20skincare%20product%20usage&width=600&height=400&seq=blog1&orientation=landscape" alt="Bí quyết chăm sóc da" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc da</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>22/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>5 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">5 Bí Quyết Chăm Sóc Da Mùa Hè Từ Các Chuyên Gia</h3>
+<p class="text-gray-600 text-sm mb-4">Khám phá những bí quyết giúp bảo vệ và chăm sóc da trong mùa hè nóng bức từ các chuyên gia hàng đầu trong ngành làm đẹp.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Natural%20ingredients%20for%20haircare%2C%20coconut%20oil%2C%20herbs%2C%20and%20flowers%20on%20wooden%20table%2C%20DIY%20hair%20mask%20preparation%2C%20beauty%20blog%20content&width=600&height=400&seq=blog2&orientation=landscape" alt="Phục hồi tóc hư tổn" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc tóc</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>20/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>7 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cách Phục Hồi Tóc Hư Tổn Sau Nhuộm Và Uốn</h3>
+<p class="text-gray-600 text-sm mb-4">Những phương pháp hiệu quả giúp phục hồi mái tóc hư tổn sau quá trình nhuộm và uốn, mang lại vẻ mềm mượt tự nhiên.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Sustainable%20beauty%20products%2C%20eco-friendly%20packaging%2C%20recycled%20materials%2C%20zero%20waste%20cosmetics%2C%20environmental%20conservation%20concept&width=600&height=400&seq=blog3&orientation=landscape" alt="Mỹ phẩm bền vững" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Tin tức</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>18/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>4 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cocoon Cam Kết Sử Dụng 100% Bao Bì Tái Chế Vào Năm 2026</h3>
+<p class="text-gray-600 text-sm mb-4">Cocoon công bố kế hoạch chuyển đổi toàn bộ bao bì sang vật liệu tái chế và thân thiện với môi trường vào năm 2026.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="skincare">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Woman%20applying%20natural%20face%20serum%2C%20skincare%20routine%2C%20close-up%20shot%20with%20soft%20lighting%2C%20beauty%20blogger%20demonstrating%20skincare%20product%20usage&width=600&height=400&seq=blog1&orientation=landscape" alt="Bí quyết chăm sóc da" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc da</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>22/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>5 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">5 Bí Quyết Chăm Sóc Da Mùa Hè Từ Các Chuyên Gia</h3>
+<p class="text-gray-600 text-sm mb-4">Khám phá những bí quyết giúp bảo vệ và chăm sóc da trong mùa hè nóng bức từ các chuyên gia hàng đầu trong ngành làm đẹp.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Woman%20applying%20face%20mask%2C%20natural%20skincare%2C%20clay%20mask%20application%2C%20beauty%20routine%2C%20self-care%20at%20home&width=600&height=400&seq=blog4&orientation=landscape" alt="Mặt nạ đất sét" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc da</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>15/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>6 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Lợi Ích Của Mặt Nạ Đất Sét Tự Nhiên Cho Da Dầu Mụn</h3>
+<p class="text-gray-600 text-sm mb-4">Tìm hiểu về những lợi ích tuyệt vời của mặt nạ đất sét tự nhiên trong việc kiểm soát dầu nhờn và ngăn ngừa mụn hiệu quả.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Vitamin%20C%20serum%20drops%20on%20skin%2C%20close-up%20of%20skincare%20application%2C%20bright%20and%20clean%20beauty%20product%20photography%2C%20anti-aging%20skincare&width=600&height=400&seq=blog5&orientation=landscape" alt="Vitamin C cho da" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc da</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>10/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>8 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Tất Tần Tật Về Vitamin C Trong Chăm Sóc Da</h3>
+<p class="text-gray-600 text-sm mb-4">Giải đáp mọi thắc mắc về Vitamin C trong skincare: công dụng, cách sử dụng và kết hợp với các thành phần khác.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="haircare">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Natural%20ingredients%20for%20haircare%2C%20coconut%20oil%2C%20herbs%2C%20and%20flowers%20on%20wooden%20table%2C%20DIY%20hair%20mask%20preparation%2C%20beauty%20blog%20content&width=600&height=400&seq=blog2&orientation=landscape" alt="Phục hồi tóc hư tổn" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc tóc</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>20/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>7 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cách Phục Hồi Tóc Hư Tổn Sau Nhuộm Và Uốn</h3>
+<p class="text-gray-600 text-sm mb-4">Những phương pháp hiệu quả giúp phục hồi mái tóc hư tổn sau quá trình nhuộm và uốn, mang lại vẻ mềm mượt tự nhiên.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Woman%20applying%20hair%20oil%20to%20long%20hair%2C%20hair%20care%20routine%2C%20natural%20hair%20products%2C%20beauty%20blog%20content&width=600&height=400&seq=blog6&orientation=landscape" alt="Dầu dưỡng tóc" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc tóc</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>12/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>5 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Bí Quyết Sử Dụng Dầu Dưỡng Tóc Đúng Cách</h3>
+<p class="text-gray-600 text-sm mb-4">Hướng dẫn chi tiết cách sử dụng dầu dưỡng tóc hiệu quả, phù hợp với từng loại tóc và tình trạng tóc khác nhau.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Natural%20herbs%20for%20hair%20growth%2C%20traditional%20Vietnamese%20hair%20care%20ingredients%2C%20herbal%20hair%20treatments%2C%20beauty%20blog%20content&width=600&height=400&seq=blog7&orientation=landscape" alt="Thảo dược cho tóc" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Chăm sóc tóc</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>05/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>6 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">5 Thảo Dược Việt Nam Giúp Tóc Mọc Nhanh Và Chắc Khỏe</h3>
+<p class="text-gray-600 text-sm mb-4">Khám phá 5 loại thảo dược truyền thống của Việt Nam có công dụng kích thích mọc tóc, giảm rụng tóc và nuôi dưỡng tóc chắc khỏe.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="tab-content" id="news">
+<div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Sustainable%20beauty%20products%2C%20eco-friendly%20packaging%2C%20recycled%20materials%2C%20zero%20waste%20cosmetics%2C%20environmental%20conservation%20concept&width=600&height=400&seq=blog3&orientation=landscape" alt="Mỹ phẩm bền vững" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Tin tức</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>18/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>4 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cocoon Cam Kết Sử Dụng 100% Bao Bì Tái Chế Vào Năm 2026</h3>
+<p class="text-gray-600 text-sm mb-4">Cocoon công bố kế hoạch chuyển đổi toàn bộ bao bì sang vật liệu tái chế và thân thiện với môi trường vào năm 2026.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Beauty%20store%20interior%2C%20natural%20cosmetics%20display%2C%20modern%20retail%20space%2C%20eco-friendly%20beauty%20shop&width=600&height=400&seq=blog8&orientation=landscape" alt="Cửa hàng mới" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Tin tức</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>08/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>3 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cocoon Khai Trương Cửa Hàng Flagship Tại Phố Đi Bộ Nguyễn Huệ</h3>
+<p class="text-gray-600 text-sm mb-4">Cocoon chính thức khai trương cửa hàng flagship đầu tiên tại phố đi bộ Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh với nhiều ưu đãi hấp dẫn.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div class="blog-card bg-white rounded-lg overflow-hidden shadow-sm">
+<div class="relative h-60">
+<img src="https://readdy.ai/api/search-image?query=Beauty%20awards%20ceremony%2C%20cosmetic%20industry%20event%2C%20product%20recognition%2C%20beauty%20brand%20celebration&width=600&height=400&seq=blog9&orientation=landscape" alt="Giải thưởng" class="w-full h-full object-cover object-top">
+<div class="absolute top-4 left-4 bg-primary text-white text-xs px-3 py-1 rounded-full">Tin tức</div>
+</div>
+<div class="p-6">
+<div class="flex items-center text-sm text-gray-500 mb-3">
+<div class="flex items-center mr-4">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-calendar-line"></i>
+</div>
+<span>01/06/2025</span>
+</div>
+<div class="flex items-center">
+<div class="w-4 h-4 flex items-center justify-center mr-1">
+<i class="ri-time-line"></i>
+</div>
+<span>4 phút đọc</span>
+</div>
+</div>
+<h3 class="text-lg font-semibold mb-3">Cocoon Nhận Giải Thưởng "Thương Hiệu Mỹ Phẩm Xanh" Năm 2025</h3>
+<p class="text-gray-600 text-sm mb-4">Cocoon vinh dự nhận giải thưởng "Thương hiệu mỹ phẩm xanh" năm 2025 do tạp chí Elle Việt Nam bình chọn.</p>
+<a href="blog-detail.html" class="inline-flex items-center text-primary font-medium hover:underline">
+Đọc tiếp
+<div class="w-4 h-4 flex items-center justify-center ml-1">
+<i class="ri-arrow-right-line"></i>
+</div>
+</a>
+</div>
+</div>
+</div>
+</div>
+<div class="text-center mt-12">
+<a href="news.html" class="inline-block bg-primary text-white px-8 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Xem tất cả bài viết</a>
+</div>
+</div>
+</section>
+<!-- Newsletter Section -->
+<section class="py-20 bg-primary/10">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Đăng ký nhận tin</h2>
+            <p class="text-gray-600 mb-8">Đăng ký để nhận thông tin về sản phẩm mới, khuyến mãi đặc biệt và các bí quyết làm đẹp từ Cocoon.</p>
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <input type="email" id="newsletter-email" placeholder="Nhập địa chỉ email của bạn" class="flex-1 px-4 py-3 rounded-button border border-gray-300 focus:border-primary focus:outline-none" required>
+                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Đăng ký</button>
+            </form>
+            <div class="mt-6 text-sm text-gray-500">
+                <label class="custom-checkbox">
+                    <input type="checkbox" required> <span class="checkmark"></span>
+                    Tôi đồng ý nhận thông tin khuyến mãi và cập nhật từ Cocoon
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Cocoon</a>
+<p class="text-gray-600 mb-6">Mỹ phẩm thiên nhiên từ Việt Nam, mang đến vẻ đẹp thuần khiết và bền vững cho làn da của bạn.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-youtube-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-tiktok-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Sản phẩm</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc da mặt</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc cơ thể</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc tóc</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Sản phẩm mới</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Bộ sản phẩm</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Thông tin</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary">Về chúng tôi</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Tin tức & Bài viết</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Cửa hàng</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Tuyển dụng</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Liên hệ</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-600">123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-600">1900 1234 56</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-600">info@cocoon.vn</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-600">Thứ 2 - Chủ nhật: 9:00 - 21:00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 Cocoon Việt Nam. Tất cả quyền được bảo lưu.</p>
+<div class="flex items-center space-x-6">
+<a href="policy.html" class="text-gray-500 hover:text-primary text-sm">Chính sách cửa hàng</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to top button -->
+<button class="back-to-top w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center" id="backToTop">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-up-line"></i>
+</div>
+</button>
+
+<!-- Mobile Menu Script -->
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuBtn.addEventListener('click', function() {
+if (mobileMenu.classList.contains('invisible')) {
+mobileMenu.classList.remove('invisible', '-translate-y-full', 'opacity-0');
+mobileMenu.classList.add('translate-y-0', 'opacity-100');
+mobileMenuBtn.innerHTML = '<i class="ri-close-line text-2xl"></i>';
+} else {
+mobileMenu.classList.add('invisible', '-translate-y-full', 'opacity-0');
+mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+mobileMenuBtn.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+}
+});
+});
+</script>
+<!-- Product Tabs Script -->
+<script id="productTabsScript">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('#productTabs .tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+const tabId = this.getAttribute('data-tab');
+// Remove active class from all buttons and contents
+tabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+tabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+tabContents.forEach(content => content.classList.remove('active'));
+// Add active class to current button and content
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('text-gray-700');
+document.getElementById(tabId).classList.add('active');
+});
+});
+});
+</script>
+<!-- Blog Tabs Script -->
+<script id="blogTabsScript">
+document.addEventListener('DOMContentLoaded', function() {
+const blogTabButtons = document.querySelectorAll('#blogTabs .tab-button');
+const blogTabContents = document.querySelectorAll('.tab-content');
+blogTabButtons.forEach(button => {
+button.addEventListener('click', function() {
+const tabId = this.getAttribute('data-tab');
+// Remove active class from all buttons and contents
+blogTabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+blogTabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+blogTabContents.forEach(content => content.classList.remove('active'));
+// Add active class to current button and content
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('text-gray-700');
+document.getElementById(tabId).classList.add('active');
+});
+});
+});
+</script>
+<!-- Login Modal Script -->
+<script id="loginModalScript">
+document.addEventListener('DOMContentLoaded', function() {
+const loginButtons = document.querySelectorAll('a[href="#"]:not([id]):contains("Đăng nhập")');
+const loginModal = document.getElementById('loginModal');
+const closeLoginModal = document.getElementById('closeLoginModal');
+function showLoginModal() {
+loginModal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function hideLoginModal() {
+loginModal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+loginButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+showLoginModal();
+});
+});
+if (closeLoginModal) {
+closeLoginModal.addEventListener('click', hideLoginModal);
+}
+// Close modal when clicking outside
+loginModal.addEventListener('click', function(e) {
+if (e.target === loginModal) {
+hideLoginModal();
+}
+});
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+hideLoginModal();
+}
+});
+// Handle form submission
+const loginForm = loginModal.querySelector('form');
+if (loginForm) {
+loginForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+const remember = document.getElementById('remember').checked;
+// Here you can add your login logic
+console.log('Login attempt:', { email, password, remember });
+// For demo purposes, show success message
+hideLoginModal();
+});
+}
+});
+</script>
+<!-- Scroll Progress Script -->
+<script id="scrollProgressScript">
+document.addEventListener('DOMContentLoaded', function() {
+const scrollProgress = document.getElementById('scrollProgress');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const scrolled = (winScroll / height) * 100;
+if (scrollProgress) {
+scrollProgress.style.width = scrolled + '%';
+}
+if (backToTop) {
+if (winScroll > 300) {
+backToTop.classList.add('visible');
+} else {
+backToTop.classList.remove('visible');
+}
+}
+});
+if (backToTop) {
+backToTop.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+}
+});
+</script>
+<!-- Animation Script -->
+<script id="animationScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Fade in elements when they come into view
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
+});
+}, {
+threshold: 0.1
+});
+fadeElements.forEach(element => {
+element.style.opacity = '0';
+element.style.transform = 'translateY(20px)';
+element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+observer.observe(element);
+});
+});
+</script>
+
+</body>
+</html>

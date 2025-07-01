@@ -1,0 +1,470 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tin tức - Cocoon Việt Nam</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#cfaf8c',
+            secondary: '#cfaf8c',
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/news.css" />
+</head>
+<body class="bg-gray-50">
+  <!-- Nội dung trang web -->
+  <!-- Được giữ nguyên từ file gốc, sẽ được nối vào đây -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Header -->f
+ <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center">
+  
+   <!-- Logo -->
+     <a href="index.html" class="block w-[120px] md:w-[150px]">
+  <img src="images/cocoon.jpg" alt="Cocoon Việt Nam" class="w-full h-auto object-contain" />
+</a>
+      <!-- Menu -->
+<nav class="hidden md:flex space-x-10 ml-10">
+<a href="sanpham.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Sản phẩm</a>
+<a href="news.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Tin tức</a>
+<a href="about.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Về chúng tôi</a>
+<a href="contact.html" class="header-link text-gray-800 hover:text-primary relative hover-underline font-medium">Liên hệ</a>
+</nav>
+
+<!-- Search -->
+</div>
+
+<div class="flex items-center space-x-6">
+<div class="relative">
+<input type="text" class="search-expand pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:bg-white focus:outline-none" placeholder="Tìm kiếm...">
+        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+            <i class="ri-search-line"></i>
+        </div>
+    </div>
+  <!-- Language Switch -->
+ <div class="language-switch">
+<div class="flex items-center space-x-1 text-gray-700">
+<span>VN</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+  <!-- Dropdown (optional) -->
+        <!-- <div class="language-options absolute mt-2 bg-white shadow p-2 rounded hidden">
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">Tiếng Việt</div>
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">English</div>
+        </div> -->
+  </div>
+ <div class="language-options p-2 w-24">
+             <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  VN</div>
+
+<div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  English </div>
+
+            </div>
+        </div>
+
+    <!-- Giỏ hàng -->
+<a href="#" class="hidden md:flex items-center space-x-1 text-gray-700 hover:text-primary">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-shopping-bag-line"></i>
+</div>
+<span class="font-medium cursor-pointer" onclick="toggleCart()">Giỏ hàng</span
+<!--start liên kết login.html nè-->
+<a href="login.html" class="hidden md:block bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 rounded-button hover:shadow-lg transition-all duration-300 whitespace-nowrap">Đăng nhập</a>
+<!--liên kết login.html nè end-->
+<button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobileMenuBtn">
+<i class="ri-menu-line text-2xl"></i>
+</button>
+</div>
+</div>
+<div class="flex items-center justify-end space-x-4">
+
+</div>
+</div>
+</header>
+  <!-- ✅ Đệm để tránh header đè -->
+  <div class="pt-24"></div>
+ <!-- Kết thúc header -->
+
+ <!-- ✅ Phần chính: Tin tức -->
+  <main class="max-w-6xl mx-auto px-4">
+  <div class="pt-24"></div>
+    <h1 class="text-3xl font-bold text-primary text-center mb-10">Tin Tức Mới Nhất</h1>
+</div>
+    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
+      <!-- Tin tức 1 -->
+       
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 1.jpg" alt="Tin tức 1" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Bí quyết chăm sóc tóc với bưởi một cách hiệu quả</h2>
+          <p class="text-sm text-gray-600 mt-2">Khám phá cách sử dụng tinh dầu vỏ bưởi...</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+
+      <!-- Tin tức 2 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 2.jpg" alt="Tin tức 2" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Chương trình "Thu Hồi Vỏ Chai - Đổi Túi Xanh" năm 2025</h2>
+          <p class="text-sm text-gray-600 mt-2">Bắt đầu từ ngày 10/5, chương trình "Thu hồi vỏ chai - Đổi Túi Xanh" chính thức trở lại.</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+
+      <!-- Tin tức 3 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 3.jpg" alt="Tin tức 3" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Khám phá cà phê Đắk Lắk trong sản phẩm tẩy da chết</h2>
+          <p class="text-sm text-gray-600 mt-2">Cà phê nguyên chất giúp loại bỏ tế bào chết và kích thích tuần hoàn máu cho làn da khỏe mạnh.</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+
+      <!-- Tin tức 4 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 4.jpg" alt="Tin tức 4" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Sữa rửa mặt bí đao - Giải pháp cho da dầu</h2>
+          <p class="text-sm text-gray-600 mt-2">Sản phẩm sữa rửa mặt từ bí đao giúp kiểm soát dầu nhờn và ngừa mụn hiệu quả.</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+
+      <!-- Tin tức 5 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 5.jpg" alt="Tin tức 5" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Chăm sóc môi với son dưỡng dừa Bến Tre</h2>
+          <p class="text-sm text-gray-600 mt-2">Son dưỡng từ dừa nguyên chất giúp đôi môi mềm mịn và hồng hào tự nhiên.</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+
+      <!-- Tin tức 6 -->
+      <article class="bg-white rounded-xl shadow-md overflow-hidden">
+        <img src="images/hình 6.jpg" alt="Tin tức 6" class="w-full h-48 object-cover">
+        <div class="p-4">
+          <h2 class="text-lg font-semibold text-gray-800">Da dầu, mụn sẽ “ăn chay” như thế nào?</h2>
+          <p class="text-sm text-gray-600 mt-2">Vẻ đẹp của làn da được xem như một tấm gương phản chiếu tốt nhất về tình trạng sức khỏe thể chất và tinh thần của chúng ta.</p>
+          <a href="#" class="text-primary text-sm font-medium hover:underline mt-3 inline-block">Đọc thêm</a>
+        </div>
+      </article>
+    </div>
+
+    <div class="text-center mt-10">
+      <a href="#" class="inline-block text-primary text-lg font-medium hover:underline">Xem thêm ➔</a>
+    </div>
+  </main>
+    <div class="pt-24"></div>
+<!-- Newsletter Section -->
+<section class="py-20 bg-primary/10">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Đăng ký nhận tin</h2>
+            <p class="text-gray-600 mb-8">Đăng ký để nhận thông tin về sản phẩm mới, khuyến mãi đặc biệt và các bí quyết làm đẹp từ Cocoon.</p>
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <input type="email" id="newsletter-email" placeholder="Nhập địa chỉ email của bạn" class="flex-1 px-4 py-3 rounded-button border border-gray-300 focus:border-primary focus:outline-none" required>
+                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Đăng ký</button>
+            </form>
+            <div class="mt-6 text-sm text-gray-500">
+                <label class="custom-checkbox">
+                    <input type="checkbox" required> <span class="checkmark"></span>
+                    Tôi đồng ý nhận thông tin khuyến mãi và cập nhật từ Cocoon
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+<!-- Footer -->
+<footer class="bg-white pt-16 pb-8">
+<div class="container mx-auto px-4">
+<div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+<div>
+<a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Cocoon</a>
+<p class="text-gray-600 mb-6">Mỹ phẩm thiên nhiên từ Việt Nam, mang đến vẻ đẹp thuần khiết và bền vững cho làn da của bạn.</p>
+<div class="flex space-x-4">
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-facebook-fill"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-instagram-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-youtube-line"></i>
+</div>
+</a>
+<a href="#" class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+<div class="w-5 h-5 flex items-center justify-center">
+<i class="ri-tiktok-line"></i>
+</div>
+</a>
+</div>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Sản phẩm</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc da mặt</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc cơ thể</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc tóc</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Sản phẩm mới</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Bộ sản phẩm</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Thông tin</h4>
+<ul class="space-y-3">
+<li><a href="#" class="text-gray-600 hover:text-primary">Về chúng tôi</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Tin tức & Bài viết</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Cửa hàng</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Tuyển dụng</a></li>
+<li><a href="#" class="text-gray-600 hover:text-primary">Liên hệ</a></li>
+</ul>
+</div>
+<div>
+<h4 class="text-lg font-semibold mb-6">Liên hệ</h4>
+<ul class="space-y-3">
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-map-pin-line"></i>
+</div>
+<span class="text-gray-600">123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-phone-line"></i>
+</div>
+<span class="text-gray-600">1900 1234 56</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-mail-line"></i>
+</div>
+<span class="text-gray-600">info@cocoon.vn</span>
+</li>
+<li class="flex items-start">
+<div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+<i class="ri-time-line"></i>
+</div>
+<span class="text-gray-600">Thứ 2 - Chủ nhật: 9:00 - 21:00</span>
+</li>
+</ul>
+</div>
+</div>
+<div class="border-t border-gray-200 pt-8">
+<div class="flex flex-col md:flex-row justify-between items-center">
+<p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 Cocoon Việt Nam. Tất cả quyền được bảo lưu.</p>
+<div class="flex items-center space-x-6">
+<a href="policy.html" class="text-gray-500 hover:text-primary text-sm">Chính sách cửa hàng</a>
+</div>
+</div>
+</div>
+</div>
+</footer>
+<!-- Back to top button -->
+<button class="back-to-top w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center" id="backToTop">
+<div class="w-6 h-6 flex items-center justify-center">
+<i class="ri-arrow-up-line"></i>
+</div>
+</button>
+
+<!-- Mobile Menu Script -->
+<script id="mobileMenuScript">
+document.addEventListener('DOMContentLoaded', function() {
+const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+const mobileMenu = document.getElementById('mobileMenu');
+mobileMenuBtn.addEventListener('click', function() {
+if (mobileMenu.classList.contains('invisible')) {
+mobileMenu.classList.remove('invisible', '-translate-y-full', 'opacity-0');
+mobileMenu.classList.add('translate-y-0', 'opacity-100');
+mobileMenuBtn.innerHTML = '<i class="ri-close-line text-2xl"></i>';
+} else {
+mobileMenu.classList.add('invisible', '-translate-y-full', 'opacity-0');
+mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+mobileMenuBtn.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+}
+});
+});
+</script>
+<!-- Product Tabs Script -->
+<script id="productTabsScript">
+document.addEventListener('DOMContentLoaded', function() {
+const tabButtons = document.querySelectorAll('#productTabs .tab-button');
+const tabContents = document.querySelectorAll('.tab-content');
+tabButtons.forEach(button => {
+button.addEventListener('click', function() {
+const tabId = this.getAttribute('data-tab');
+// Remove active class from all buttons and contents
+tabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+tabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+tabContents.forEach(content => content.classList.remove('active'));
+// Add active class to current button and content
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('text-gray-700');
+document.getElementById(tabId).classList.add('active');
+});
+});
+});
+</script>
+<!-- Blog Tabs Script -->
+<script id="blogTabsScript">
+document.addEventListener('DOMContentLoaded', function() {
+const blogTabButtons = document.querySelectorAll('#blogTabs .tab-button');
+const blogTabContents = document.querySelectorAll('.tab-content');
+blogTabButtons.forEach(button => {
+button.addEventListener('click', function() {
+const tabId = this.getAttribute('data-tab');
+// Remove active class from all buttons and contents
+blogTabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+blogTabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+blogTabContents.forEach(content => content.classList.remove('active'));
+// Add active class to current button and content
+this.classList.add('active', 'bg-primary', 'text-white');
+this.classList.remove('text-gray-700');
+document.getElementById(tabId).classList.add('active');
+});
+});
+});
+</script>
+<!-- Login Modal Script -->
+<script id="loginModalScript">
+document.addEventListener('DOMContentLoaded', function() {
+const loginButtons = document.querySelectorAll('a[href="#"]:not([id]):contains("Đăng nhập")');
+const loginModal = document.getElementById('loginModal');
+const closeLoginModal = document.getElementById('closeLoginModal');
+function showLoginModal() {
+loginModal.classList.remove('hidden');
+document.body.style.overflow = 'hidden';
+}
+function hideLoginModal() {
+loginModal.classList.add('hidden');
+document.body.style.overflow = 'auto';
+}
+loginButtons.forEach(button => {
+button.addEventListener('click', function(e) {
+e.preventDefault();
+showLoginModal();
+});
+});
+if (closeLoginModal) {
+closeLoginModal.addEventListener('click', hideLoginModal);
+}
+// Close modal when clicking outside
+loginModal.addEventListener('click', function(e) {
+if (e.target === loginModal) {
+hideLoginModal();
+}
+});
+// Close modal with Escape key
+document.addEventListener('keydown', function(e) {
+if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+hideLoginModal();
+}
+});
+// Handle form submission
+const loginForm = loginModal.querySelector('form');
+if (loginForm) {
+loginForm.addEventListener('submit', function(e) {
+e.preventDefault();
+const email = document.getElementById('email').value;
+const password = document.getElementById('password').value;
+const remember = document.getElementById('remember').checked;
+// Here you can add your login logic
+console.log('Login attempt:', { email, password, remember });
+// For demo purposes, show success message
+hideLoginModal();
+});
+}
+});
+</script>
+<!-- Scroll Progress Script -->
+<script id="scrollProgressScript">
+document.addEventListener('DOMContentLoaded', function() {
+const scrollProgress = document.getElementById('scrollProgress');
+const backToTop = document.getElementById('backToTop');
+window.addEventListener('scroll', function() {
+const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+const scrolled = (winScroll / height) * 100;
+if (scrollProgress) {
+scrollProgress.style.width = scrolled + '%';
+}
+if (backToTop) {
+if (winScroll > 300) {
+backToTop.classList.add('visible');
+} else {
+backToTop.classList.remove('visible');
+}
+}
+});
+if (backToTop) {
+backToTop.addEventListener('click', function() {
+window.scrollTo({
+top: 0,
+behavior: 'smooth'
+});
+});
+}
+});
+</script>
+<!-- Animation Script -->
+<script id="animationScript">
+document.addEventListener('DOMContentLoaded', function() {
+// Fade in elements when they come into view
+const fadeElements = document.querySelectorAll('.fade-in');
+const observer = new IntersectionObserver((entries) => {
+entries.forEach(entry => {
+if (entry.isIntersecting) {
+entry.target.style.opacity = '1';
+entry.target.style.transform = 'translateY(0)';
+}
+});
+}, {
+threshold: 0.1
+});
+fadeElements.forEach(element => {
+element.style.opacity = '0';
+element.style.transform = 'translateY(20px)';
+element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+observer.observe(element);
+});
+});
+</script>
+
+</body>
+</html>

@@ -1,0 +1,65 @@
+
+    .contact-wrapper {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      min-height: 100vh;
+      padding-top: 80px; /* để tránh bị header che lên */
+      box-sizing: border-box;
+    }
+
+    .contact-container {
+      background: #fff;
+      padding: 2em 2.5em;
+      border-radius: 12px;
+      box-shadow: 0 4px 24px rgba(0, 0, 0, 0.08);
+      width: 400px;
+      text-align: center;
+    }
+
+    .contact-container h2 {
+      margin-bottom: 1.2em;
+      color: #cfaf8c;
+    }
+
+    .contact-container input,
+    .contact-container textarea {
+      width: 100%;
+      padding: 0.7em;
+      margin-bottom: 1em;
+      border: 1px solid #ccc;
+      border-radius: 6px;
+      font-size: 1em;
+    }
+
+    .contact-container textarea {
+      min-height: 80px;
+      resize: vertical;
+    }
+
+    .contact-container button {
+      width: 100%;
+      padding: 0.7em;
+      background: #cfaf8c;
+      color: #fff;
+      border: none;
+      border-radius: 6px;
+      font-size: 1em;
+      cursor: pointer;
+      transition: background 0.2s;
+    }
+
+    .contact-container button:hover {
+      background: #b18d6b;
+    }
+
+    .contact-container .back-link {
+      display: block;
+      margin-top: 1em;
+      color: #cfaf8c;
+      text-decoration: none;
+    }
+
+    .contact-container .back-link:hover {
+      text-decoration: underline;
+    }

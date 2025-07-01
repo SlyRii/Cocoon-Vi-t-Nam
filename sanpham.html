@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Tất cả sản phẩm - Cocoon Việt Nam</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#cfaf8c',
+            secondary: '#cfaf8c',
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/sanpham.css" />
+</head>
+<body class="bg-gray-50">
+  <!-- Nội dung trang web -->
+  <!-- Được giữ nguyên từ file gốc, sẽ được nối vào đây -->
+
+<div class="scroll-progress" id="scrollProgress"></div>
+<!-- Header -->f
+ <!-- Header -->
+<header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+<div class="container mx-auto px-4 py-3 flex items-center justify-between">
+<div class="flex items-center">
+  
+   <!-- Logo -->
+     <a href="index.html" class="block w-[120px] md:w-[150px]">
+  <img src="images/cocoon.jpg" alt="Cocoon Việt Nam" class="w-full h-auto object-contain" />
+</a>
+      <!-- Menu -->
+<nav class="hidden md:flex space-x-10 ml-10">
+<a href="sanpham.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Sản phẩm</a>
+<a href="news.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Tin tức</a>
+<a href="about.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Về chúng tôi</a>
+<a href="contact.html" class="header-link text-gray-800 hover:text-primary relative hover-underline font-medium">Liên hệ</a>
+</nav>
+
+<!-- Search -->
+</div>
+
+<div class="flex items-center space-x-6">
+<div class="relative">
+<input type="text" class="search-expand pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:bg-white focus:outline-none" placeholder="Tìm kiếm...">
+        <div class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+            <i class="ri-search-line"></i>
+        </div>
+    </div>
+  <!-- Language Switch -->
+ <div class="language-switch">
+<div class="flex items-center space-x-1 text-gray-700">
+<span>VN</span>
+<div class="w-4 h-4 flex items-center justify-center">
+<i class="ri-arrow-down-s-line"></i>
+</div>
+  <!-- Dropdown (optional) -->
+        <!-- <div class="language-options absolute mt-2 bg-white shadow p-2 rounded hidden">
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">Tiếng Việt</div>
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">English</div>
+        </div> -->
+  </div>
+ <div class="language-options p-2 w-24">
+             <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  VN</div>
+
+<div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi">  English </div>
+    <!-- Giỏ hàng -->
+            </div>
+        </div>
+        <a href="#" class="hidden md:flex items-center space-x-1 text-gray-700 hover:text-primary relative"
+          onclick="toggleCart(); return false;">
+          <div class="w-5 h-5 flex items-center justify-center">
+            <i class="ri-shopping-bag-line"></i>
+          </div>
+          <span class="font-medium cursor-pointer">Giỏ hàng</span>
+          <span id="cart-count"
+            class="absolute -top-2 -right-2 bg-red-500 text-white text-xs rounded-full w-5 h-5 flex items-center justify-center"
+            style="display: none">0</span>
+        </a>
+        <a href="#"
+          class="hidden md:block bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 rounded-button hover:shadow-lg transition-all duration-300 whitespace-nowrap"
+          onclick="showLoginModal(); return false;">Đăng nhập</a>
+
+        <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobileMenuBtn">
+          <i class="ri-menu-line text-2xl"></i>
+        </button>
+      </div>
+    </div>
+  </header>
+
+  <div id="mobileMenu"
+    class="fixed top-0 left-0 w-full h-full bg-white z-40 transform -translate-y-full opacity-0 transition-all duration-300 md:hidden">
+    <div class="p-4 flex justify-end">
+      <button class="w-10 h-10 flex items-center justify-center text-gray-700" id="closeMobileMenuBtn">
+        <i class="ri-close-line text-2xl"></i>
+      </button>
+    </div>
+    <nav class="flex flex-col items-center space-y-6 text-lg py-10">
+      <a href="sanpham.html" class="text-gray-800 hover:text-primary font-medium">Sản phẩm</a>
+      <a href="news.html" class="text-gray-800 hover:text-primary font-medium">Tin tức</a>
+      <a href="about.html" class="text-gray-800 hover:text-primary font-medium">Về chúng tôi</a>
+      <a href="contact.html" class="text-gray-800 hover:text-primary font-medium">Liên hệ</a>
+      <a href="#"
+        class="bg-primary text-white px-6 py-2 rounded-button mt-4 hover:shadow-lg transition-all duration-300"
+        onclick="showLoginModal(); return false;">Đăng nhập</a>
+    </nav>
+  </div>
+  <div class="pt-24"></div>
+  <section class="relative overflow-hidden bg-primary/10 py-16 mt-2">
+    <div class="container mx-auto px-4 flex flex-col md:flex-row items-center">
+      <div class="md:w-1/2 mb-10 md:mb-0 z-10">
+        <h1 class="text-4xl md:text-5xl font-bold text-gray-800 mb-4">
+          Siêu Sale Hè 2025
+        </h1>
+        <p class="text-lg text-gray-600 mb-8">
+          Giảm giá lên đến 50% cho tất cả sản phẩm chăm sóc da từ Cocoon. Cơ
+          hội vàng để sở hữu bộ sưu tập mới nhất với giá ưu đãi.
+        </p>
+        <div class="flex space-x-4">
+          <a href="detail.html"
+            class="inline-block bg-primary text-white px-6 py-3 rounded-button font-medium hover:bg-primary/90 transition-colors whitespace-nowrap">
+            Mua ngay
+          </a>
+          <button
+            class="border border-primary text-primary px-6 py-3 rounded-button font-medium hover:bg-primary/10 transition-colors whitespace-nowrap">
+            Xem thêm
+          </button>
+        </div>
+      </div>
+      <div class="md:w-1/2 relative">
+        <img src="images/nước sen sale.webp" alt="Cocoon Skincare Products"
+          class="rounded-lg shadow-lg object-cover object-top" />
+      </div>
+    </div>
+  </section>
+
+  <section class="py-12 bg-white">
+    <div class="container mx-auto px-4">
+      <h2 class="text-2xl font-bold text-gray-800 mb-8 text-center">
+        Danh Mục Khuyến Mãi
+      </h2>
+      <div class="grid grid-cols-2 md:grid-cols-4 gap-4">
+        <a href="sales.html"
+          class="block bg-primary/5 rounded-lg p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+            <i class="ri-flashlight-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-medium text-gray-800">Flash Sale</h3>
+          <p class="text-sm text-gray-600 mt-2">Giảm sốc 6 giờ mỗi ngày</p>
+        </a>
+        <div class="bg-primary/5 rounded-lg p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+            <i class="ri-gift-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-medium text-gray-800">Combo Tiết Kiệm</h3>
+          <p class="text-sm text-gray-600 mt-2">Mua nhiều giảm nhiều</p>
+        </div>
+        <div class="bg-primary/5 rounded-lg p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+            <i class="ri-vip-crown-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-medium text-gray-800">Ưu Đãi Thành Viên</h3>
+          <p class="text-sm text-gray-600 mt-2">Đặc quyền cho thành viên</p>
+        </div>
+        <div class="bg-primary/5 rounded-lg p-6 text-center hover:shadow-md transition-shadow cursor-pointer">
+          <div class="w-16 h-16 mx-auto mb-4 bg-primary/20 rounded-full flex items-center justify-center">
+            <i class="ri-coupon-line text-2xl text-primary"></i>
+          </div>
+          <h3 class="font-medium text-gray-800">Quà Tặng</h3>
+          <p class="text-sm text-gray-600 mt-2">Quà tặng kèm đơn hàng</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="py-12 bg-gray-50">
+      <div class="container mx-auto px-4">
+        <h2 class="text-2xl font-bold text-gray-800 mb-8">Sản Phẩm</h2>
+        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4" id="product-list">
+          </div>
+
+        <div class="flex justify-center mt-12">
+          <div class="inline-flex rounded-md shadow-sm">
+            <a href="#"
+              class="px-4 py-2 text-sm font-medium text-gray-500 bg-white border border-gray-300 rounded-l-lg hover:bg-gray-50">
+              <i class="ri-arrow-left-s-line"></i>
+            </a>
+            <a href="#" class="px-4 py-2 text-sm font-medium text-white bg-primary border border-primary">1</a>
+            <a href="#"
+              class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">2</a>
+            <a href="#"
+              class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 hover:bg-gray-50">3</a>
+            <a href="#"
+              class="px-4 py-2 text-sm font-medium text-gray-700 bg-white border border-gray-300 rounded-r-lg hover:bg-gray-50">
+              <i class="ri-arrow-right-s-line"></i>
+            </a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <div class="pt-20"></div>
+<section class="py-20 bg-primary/10">
+    <div class="container mx-auto px-4">
+        <div class="max-w-3xl mx-auto text-center">
+            <h2 class="text-3xl font-bold mb-4">Đăng ký nhận tin</h2>
+            <p class="text-gray-600 mb-8">Đăng ký để nhận thông tin về sản phẩm mới, khuyến mãi đặc biệt và các bí quyết làm đẹp từ Cocoon.</p>
+            <form id="newsletter-form" class="flex flex-col sm:flex-row gap-4 max-w-xl mx-auto">
+                <input type="email" id="newsletter-email" placeholder="Nhập địa chỉ email của bạn" class="flex-1 px-4 py-3 rounded-button border border-gray-300 focus:border-primary focus:outline-none" required>
+                <button type="submit" class="bg-primary text-white px-6 py-3 rounded-button font-medium hover:shadow-lg transition-all duration-300 whitespace-nowrap !rounded-button">Đăng ký</button>
+            </form>
+            <div class="mt-6 text-sm text-gray-500">
+                <label class="custom-checkbox">
+                    <input type="checkbox" required> <span class="checkmark"></span>
+                    Tôi đồng ý nhận thông tin khuyến mãi và cập nhật từ Cocoon
+                </label>
+            </div>
+        </div>
+    </div>
+</section>
+
+    <footer class="bg-white pt-16 pb-8">
+      <div class="container mx-auto px-4">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+          <div>
+            <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Cocoon</a>
+            <p class="text-gray-600 mb-6">
+              Mỹ phẩm thiên nhiên từ Việt Nam, mang đến vẻ đẹp thuần khiết và bền
+              vững cho làn da của bạn.
+            </p>
+            <div class="flex space-x-4">
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-facebook-fill"></i>
+                </div>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-instagram-line"></i>
+                </div>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-youtube-line"></i>
+                </div>
+              </a>
+              <a href="#"
+                class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+                <div class="w-5 h-5 flex items-center justify-center">
+                  <i class="ri-tiktok-line"></i>
+                </div>
+              </a>
+            </div>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Sản phẩm</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Chăm sóc da mặt</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Chăm sóc cơ thể</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Chăm sóc tóc</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Sản phẩm mới</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Bộ sản phẩm</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Thông tin</h4>
+            <ul class="space-y-3">
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Về chúng tôi</a>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Tin tức & Bài viết</a>
+              </li>
+              <li>
+             <span class=" text-gray-600">Cửa hàng</span>
+              </li>
+              <li>
+                  <span class=" text-gray-600">Tuyển dụng</span>
+              </li>
+              <li>
+                <a href="#" class="text-gray-600 hover:text-primary">Liên hệ</a>
+              </li>
+            </ul>
+          </div>
+          <div>
+            <h4 class="text-lg font-semibold mb-6">Liên hệ</h4>
+            <ul class="space-y-3">
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                  <i class="ri-map-pin-line"></i>
+                </div>
+                <span class="text-gray-600">123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                  <i class="ri-phone-line"></i>
+                </div>
+                <span class="text-gray-600">1900 1234 56</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                  <i class="ri-mail-line"></i>
+                </div>
+                <span class="text-gray-600">info@cocoon.vn</span>
+              </li>
+              <li class="flex items-start">
+                <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                  <i class="ri-time-line"></i>
+                </div>
+                <span class="text-gray-600">Thứ 2 - Chủ nhật: 9:00 - 21:00</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="border-t border-gray-200 pt-8">
+          <div class="flex flex-col md:flex-row justify-between items-center">
+            <p class="text-gray-500 text-sm mb-4 md:mb-0">
+              &copy; 2025 Cocoon Việt Nam. Tất cả quyền được bảo lưu.
+            </p>
+            <div class="flex items-center space-x-6">
+              <a href="policy.html" class="text-gray-500 hover:text-primary text-sm">Chính sách cửa hàng</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <button class="back-to-top w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center"
+      id="backToTop">
+      <div class="w-6 h-6 flex items-center justify-center">
+        <i class="ri-arrow-up-line"></i>
+      </div>
+    </button>
+
+    <div id="loginModal" class="fixed inset-0 bg-black bg-opacity-50 flex items-center justify-center z-50 hidden">
+      <div class="bg-white p-8 rounded-lg shadow-xl max-w-md w-full relative">
+        <button id="closeLoginModal" class="absolute top-3 right-3 text-gray-500 hover:text-gray-800 text-2xl">
+          &times;
+        </button>
+        <h2 class="text-2xl font-bold text-gray-800 mb-6 text-center">Đăng nhập</h2>
+        <form>
+          <div class="mb-4">
+            <label for="email" class="block text-gray-700 text-sm font-medium mb-2">Email</label>
+            <input type="email" id="email"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Nhập email của bạn" required />
+          </div>
+          <div class="mb-6">
+            <label for="password" class="block text-gray-700 text-sm font-medium mb-2">Mật khẩu</label>
+            <input type="password" id="password"
+              class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-primary"
+              placeholder="Nhập mật khẩu của bạn" required />
+          </div>
+          <div class="flex items-center justify-between mb-6">
+            <label class="flex items-center text-gray-700 text-sm">
+              <input type="checkbox" id="remember" class="mr-2 rounded" />
+              Nhớ mật khẩu
+            </label>
+            <a href="#" class="text-sm text-primary hover:underline">Quên mật khẩu?</a>
+          </div>
+          <button type="submit"
+            class="w-full bg-primary text-white py-3 rounded-button font-semibold hover:bg-primary/90 transition-colors">
+            Đăng nhập
+          </button>
+          <p class="text-center text-gray-600 text-sm mt-4">
+            Chưa có tài khoản?
+            <a href="#" class="text-primary hover:underline">Đăng ký ngay</a>
+          </p>
+        </form>
+      </div>
+    </div>
+    <div id="cart-modal" class="fixed inset-0 bg-black bg-opacity-50 flex justify-end z-50 hidden">
+      <div class="bg-white w-full max-w-md h-full shadow-lg flex flex-col">
+        <div class="flex items-center justify-between p-4 border-b border-gray-200">
+          <h2 class="text-xl font-bold text-gray-800">Giỏ hàng của bạn</h2>
+          <button id="close-cart-modal" class="text-gray-500 hover:text-gray-800 text-2xl">
+            <i class="ri-close-line"></i>
+          </button>
+        </div>
+        <div id="cart-items" class="flex-1 overflow-y-auto p-4 space-y-4">
+          <p id="empty-cart-message" class="text-gray-500 text-center hidden">Giỏ hàng của bạn đang trống.</p>
+        </div>
+        <div class="p-4 border-t border-gray-200">
+          <div class="flex justify-between items-center mb-4">
+            <span class="text-lg font-semibold text-gray-800">Tổng cộng:</span>
+            <span id="cart-total" class="text-xl font-bold text-primary">0₫</span>
+          </div>
+          <a href="checkout.html"
+            class="block text-center w-full bg-primary text-white py-3 rounded-button font-semibold hover:bg-primary/90 transition-colors">
+            Tiến hành thanh toán
+          </a>
+        </div>
+      </div>
+    </div>
+    <script>
+      // Global products array (Đây là dữ liệu sản phẩm bạn có)
+      const products = [
+        { id: 1, name: "Son dưỡng dầu dừa Bến Tre 5g", price: 32000, image: "images/son dưỡng môi.jpeg" },
+        { id: 2, name: "Bơ dưỡng thể cà phê Đắk Lắk 200ml", price: 245000, image: "images/bơ dưỡng.jpeg" },
+        { id: 3, name: "Nước sen Hậu Giang 140ml", price: 195000, image: "images/nước sei.webp" },
+        { id: 4, name: "Xà phòng rửa tay khuynh diệp & bạc hà hình chú thỏ", price: 59000, image: "images/xà phòng.jpeg" },
+        { id: 5, name: "Nước dưỡng da đầu bồ kết 140ml", price: 185000, image: "images/nước dưỡng da đu.webp" },
+        { id: 6, name: "Xịt khoáng nghệ Hưng Yên 130ml", price: 215000, image: "images/xịt khoảng.webp" },
+      ];
+
+      // DOM Elements
+      const productList = document.getElementById("product-list");
+      const mobileMenuBtn = document.getElementById("mobileMenuBtn");
+      const mobileMenu = document.getElementById("mobileMenu");
+      const closeMobileMenuBtn = document.getElementById("closeMobileMenuBtn");
+      const loginModal = document.getElementById("loginModal");
+      const closeLoginModal = document.getElementById("closeLoginModal");
+      const loginForm = loginModal ? loginModal.querySelector("form") : null;
+      const backToTop = document.getElementById("backToTop");
+      const scrollProgress = document.getElementById("scrollProgress");
+
+      // --- Helper Functions (chỉ các hàm không liên quan trực tiếp đến giỏ hàng) ---
+      /**
+       * Placeholder for showing product detail (if you had a dedicated page/modal for it)
+       */
+      function showProductDetail(productId) {
+        const product = products.find((p) => p.id === productId);
+        if (product) {
+          console.log(`Hiển thị chi tiết sản phẩm ID: ${productId}: ${product.name}`);
+          // In a real application, you would navigate to a product detail page:
+          // window.location.href = `product-detail.html?id=${productId}`;
+          // Or open a dedicated modal for product details.
+        } else {
+          console.log(`Không tìm thấy sản phẩm với ID: ${productId}`);
+        }
+      }
+
+      /**
+       * Formats a number as Vietnamese currency.
+       * Cần giữ lại hoặc khai báo lại hàm này nếu bạn muốn hiển thị giá ở đây.
+       * Hoặc di chuyển productList rendering vào cart.js và truyền products vào.
+       * Để đơn giản, tôi giữ lại ở đây cho phần hiển thị sản phẩm chính.
+       */
+      function formatCurrency(amount) {
+        return amount.toLocaleString("vi-VN") + "₫";
+      }
+
+      // --- Product Listing Initialization (on main page) ---
+      // Các sản phẩm được render ở đây sử dụng `products` array
+      if (productList) {
+        products.forEach((product) => {
+          const div = document.createElement("div");
+          div.className = "product bg-white rounded-lg shadow-md p-4 flex flex-col items-center text-center hover:shadow-lg transition-shadow";
+          div.innerHTML = `
+                <img src="${product.image}" alt="${product.name}" class="w-full h-40 object-cover mb-4 rounded-md cursor-pointer" onclick="showProductDetail(${product.id})">
+                <h3 class="text-md font-semibold text-gray-800 mb-2 cursor-pointer" onclick="showProductDetail(${product.id})">${product.name}</h3>
+                <p class="text-lg text-primary font-bold mb-4">${formatCurrency(product.price)}</p>
+                <button class="bg-primary text-white px-4 py-2 rounded-button w-full hover:bg-primary/90 transition-colors"
+                  onclick="addToCart(${product.id}, '${product.name.replace(/'/g, "\\'")}', ${product.price}, '${product.image}')">
+                  Thêm vào giỏ
+                </button>
+              `;
+          productList.appendChild(div);
+        });
+      }
+
+
+      // --- Event Listeners and Initializations on DOM Load ---
+      document.addEventListener("DOMContentLoaded", function () {
+        // Mobile Menu Events
+        if (mobileMenuBtn && mobileMenu && closeMobileMenuBtn) {
+          mobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.toggle("invisible");
+            mobileMenu.classList.toggle("-translate-y-full");
+            mobileMenu.classList.toggle("opacity-0");
+            mobileMenu.classList.toggle("translate-y-0");
+            mobileMenu.classList.toggle("opacity-100");
+            mobileMenuBtn.innerHTML = mobileMenu.classList.contains("invisible")
+              ? '<i class="ri-menu-line text-2xl"></i>'
+              : '<i class="ri-close-line text-2xl"></i>';
+          });
+          closeMobileMenuBtn.addEventListener("click", function () {
+            mobileMenu.classList.add("invisible", "-translate-y-full", "opacity-0");
+            mobileMenu.classList.remove("translate-y-0", "opacity-100");
+            mobileMenuBtn.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+          });
+        }
+
+        // Login Modal Events
+        const loginButtons = document.querySelectorAll(
+          'a[href="login.html"], a[href="#"][onclick*="showLoginModal()"]'
+        );
+        // Function definitions for showLoginModal (khai báo toàn cục) and hideLoginModal
+        window.showLoginModal = function () { // Đảm bảo hàm này có thể truy cập được từ onclick HTML
+          if (loginModal) {
+            loginModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          } else {
+            console.warn("Login Modal not found. Redirecting to login page.");
+            window.location.href = "login.html";
+          }
+        }
+        function hideLoginModal() {
+          if (loginModal) {
+            loginModal.classList.add("hidden");
+            document.body.style.overflow = "auto";
+          }
+        }
+        loginButtons.forEach((button) => {
+          button.addEventListener("click", function (e) {
+            e.preventDefault();
+            showLoginModal();
+          });
+        });
+        if (closeLoginModal) {
+          closeLoginModal.addEventListener("click", hideLoginModal);
+        }
+        if (loginModal) {
+          loginModal.addEventListener("click", function (e) {
+            if (e.target === loginModal) {
+              hideLoginModal();
+            }
+          });
+          document.addEventListener("keydown", function (e) {
+            if (e.key === "Escape" && !loginModal.classList.contains("hidden")) {
+              hideLoginModal();
+            }
+          });
+          if (loginForm) {
+            loginForm.addEventListener("submit", function (e) {
+              e.preventDefault();
+              const email = document.getElementById("email")?.value;
+              const password = document.getElementById("password")?.value;
+              const remember = document.getElementById("remember")?.checked;
+              console.log("Login attempt:", { email, password, remember });
+              hideLoginModal();
+              alert("Đăng nhập thành công (giả lập)!"); // For demonstration
+            });
+          }
+        }
+
+        // Scroll Progress & Back to Top
+        window.addEventListener("scroll", function () {
+          const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+          const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+          const scrolled = (winScroll / height) * 100;
+          if (scrollProgress) {
+            scrollProgress.style.width = scrolled + "%";
+          }
+          if (backToTop) {
+            if (winScroll > 300) {
+              backToTop.classList.add("visible");
+            } else {
+              backToTop.classList.remove("visible");
+            }
+          }
+        });
+        if (backToTop) {
+          backToTop.addEventListener("click", function () {
+            window.scrollTo({
+              top: 0,
+              behavior: "smooth",
+            });
+          });
+        }
+
+        // Tab control for general use (e.g., product tabs, blog tabs)
+        const allTabButtons = document.querySelectorAll(".tab-button");
+        const allTabContents = document.querySelectorAll(".tab-content");
+        allTabButtons.forEach((button) => {
+          button.addEventListener("click", function () {
+            const tabId = this.getAttribute("data-tab");
+            allTabContents.forEach((content) => {
+              content.classList.add("hidden");
+              content.classList.remove("active"); // Remove active class for consistency
+            });
+            document.getElementById(tabId).classList.remove("hidden");
+            document.getElementById(tabId).classList.add("active"); // Add active class for consistency
+            allTabButtons.forEach((btn) => {
+              btn.classList.remove("text-primary", "border-primary", "active", "bg-primary", "text-white");
+              btn.classList.add("text-gray-500", "border-transparent");
+            });
+            this.classList.remove("text-gray-500", "border-transparent");
+            this.classList.add("text-primary", "border-primary", "active", "bg-primary", "text-white");
+          });
+        });
+
+        // Quantity Control (for a potential product detail page, not directly used in the product list view)
+        const decreaseQtyBtn = document.getElementById("decrease-qty");
+        const increaseQtyBtn = document.getElementById("increase-qty");
+        const quantityInput = document.getElementById("quantity");
+        if (decreaseQtyBtn && increaseQtyBtn && quantityInput) {
+          decreaseQtyBtn.addEventListener("click", function () {
+            const currentValue = parseInt(quantityInput.value);
+            if (currentValue > 1) {
+              quantityInput.value = currentValue - 1;
+            }
+          });
+          increaseQtyBtn.addEventListener("click", function () {
+            const currentValue = parseInt(quantityInput.value);
+            quantityInput.value = currentValue + 1;
+          });
+          quantityInput.addEventListener("change", function () {
+            if (this.value < 1) {
+              this.value = 1;
+            }
+          });
+        }
+
+        // Image Zoom (for a potential product detail page)
+        const zoomOverlay = document.getElementById("zoom-overlay");
+        const zoomModal = document.getElementById("zoom-modal");
+        const zoomedImage = document.getElementById("zoomed-image");
+        const closeZoom = document.getElementById("close-zoom");
+        const mainImage = document.getElementById("main-image"); // Assuming this is on a detail page
+        if (zoomOverlay && zoomModal && zoomedImage && closeZoom && mainImage) {
+          zoomOverlay.addEventListener("click", function () {
+            zoomedImage.src = mainImage.src;
+            zoomModal.classList.remove("hidden");
+            document.body.style.overflow = "hidden";
+          });
+          closeZoom.addEventListener("click", function () {
+            zoomModal.classList.add("hidden");
+            document.body.style.overflow = "";
+          });
+          zoomModal.addEventListener("click", function (e) {
+            if (e.target === zoomModal) {
+              zoomModal.classList.add("hidden");
+              document.body.style.overflow = "";
+            }
+          });
+        }
+
+        // Rating Stars (for a potential product detail page)
+        const ratingStars = document.querySelectorAll(".rating-star");
+        let selectedRating = 0;
+        ratingStars.forEach((star) => {
+          star.addEventListener("click", function () {
+            const rating = parseInt(this.getAttribute("data-rating"));
+            selectedRating = rating;
+            ratingStars.forEach((s, index) => {
+              if (index < rating) {
+                s.classList.remove("ri-star-line", "text-gray-400");
+                s.classList.add("ri-star-fill", "text-yellow-400");
+              } else {
+                s.classList.remove("ri-star-fill", "text-yellow-400");
+                s.classList.add("ri-star-line", "text-gray-400");
+              }
+            });
+          });
+          star.addEventListener("mouseenter", function () {
+            const rating = parseInt(this.getAttribute("data-rating"));
+            ratingStars.forEach((s, index) => {
+              if (index < rating) {
+                s.classList.add("text-yellow-400");
+              }
+            });
+          });
+          star.addEventListener("mouseleave", function () {
+            ratingStars.forEach((s, index) => {
+              if (index < selectedRating) {
+                s.classList.add("ri-star-fill", "text-yellow-400");
+                s.classList.remove("ri-star-line", "text-gray-400");
+              } else {
+                s.classList.add("ri-star-line", "text-gray-400");
+                s.classList.remove("ri-star-fill", "text-yellow-400");
+              }
+            });
+          });
+        });
+
+        // Custom Select (as per your original code)
+        var x, i, j, l, ll, selElmnt, a, b, c;
+        x = document.getElementsByClassName("custom-select");
+        l = x.length;
+        for (i = 0; i < l; i++) {
+          selElmnt = x[i].getElementsByTagName("select")[0];
+          ll = selElmnt ? selElmnt.length : 0;
+          a = document.createElement("DIV");
+          a.setAttribute("class", "select-selected");
+          a.innerHTML = selElmnt ? selElmnt.options[selElmnt.selectedIndex].innerHTML : "Chọn...";
+          x[i].appendChild(a);
+          b = document.createElement("DIV");
+          b.setAttribute("class", "select-items select-hide");
+          for (j = 0; j < ll; j++) {
+            c = document.createElement("DIV");
+            c.innerHTML = selElmnt.options[j].innerHTML;
+            c.addEventListener("click", function (e) {
+              var y, i, k, s, h, sl, yl;
+              s = this.parentNode.parentNode.getElementsByTagName("select")[0];
+              sl = s.length;
+              h = this.parentNode.previousSibling;
+              for (i = 0; i < sl; i++) {
+                if (s.options[i].innerHTML == this.innerHTML) {
+                  s.selectedIndex = i;
+                  h.innerHTML = this.innerHTML;
+                  y = this.parentNode.getElementsByClassName("same-as-selected");
+                  yl = y.length;
+                  for (k = 0; k < yl; k++) {
+                    y[k].removeAttribute("class");
+                  }
+                  this.setAttribute("class", "same-as-selected");
+                  break;
+                }
+              }
+              h.click();
+            });
+            b.appendChild(c);
+          }
+          x[i].appendChild(b);
+          a.addEventListener("click", function (e) {
+            e.stopPropagation();
+            closeAllSelect(this);
+            this.nextSibling.classList.toggle("select-hide");
+            this.classList.toggle("select-arrow-active");
+          });
+        }
+        function closeAllSelect(elmnt) {
+          var x, y, i, xl, yl, arrNo = [];
+          x = document.getElementsByClassName("select-items");
+          y = document.getElementsByClassName("select-selected");
+          xl = x.length;
+          yl = y.length;
+          for (i = 0; i < yl; i++) {
+            if (elmnt == y[i]) {
+              arrNo.push(i);
+            } else {
+              y[i].classList.remove("select-arrow-active");
+            }
+          }
+          for (i = 0; i < xl; i++) {
+            if (arrNo.indexOf(i)) {
+              x[i].classList.add("select-hide");
+            }
+          }
+        }
+        document.addEventListener("click", closeAllSelect);
+
+        // Initial render of cart items on page load
+        // renderCartItems(); // Hàm này giờ được gọi từ cart.js
+      });
+    </script>
+    <script src="js/cart.js"></script> 
+</body>
+
+</html>

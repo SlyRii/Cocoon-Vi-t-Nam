@@ -1,0 +1,227 @@
+      /* Các CSS chung giữ lại trong HTML nếu bạn muốn, hoặc chuyển sang style.css */
+      :where([class^="ri-"])::before {
+        content: "\f3c2";
+      } /* Đây là đoạn CSS gốc của bạn */
+    
+      input[type="number"]::-webkit-inner-spin-button,
+      input[type="number"]::-webkit-outer-spin-button {
+        -webkit-appearance: none;
+        margin: 0;
+      }
+      input[type="number"] {
+        appearance: textfield;
+        -moz-appearance: textfield;
+      }
+
+      /* CSS cho custom select (nếu chưa có trong style.css) */
+      .custom-select {
+        position: relative;
+        font-family: inherit;
+      }
+
+      .custom-select select {
+        display: none; /* Hide original select */
+      }
+
+      .select-selected {
+        background-color: #f3f4f6; /* bg-gray-100 */
+        padding: 0.5rem 1rem;
+        border-radius: 0.5rem; /* rounded-button */
+        cursor: pointer;
+        user-select: none;
+        border: 1px solid #d1d5db; /* border-gray-300 */
+      }
+
+      .select-selected.select-arrow-active:after {
+        transform: rotate(180deg);
+      }
+
+      .select-items {
+        position: absolute;
+        background-color: white;
+        top: 100%;
+        left: 0;
+        right: 0;
+        z-index: 99;
+        border: 1px solid #d1d5db;
+        border-radius: 0.5rem;
+        box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.1),
+          0 2px 4px -1px rgba(0, 0, 0, 0.06);
+      }
+
+      .select-hide {
+        display: none;
+      }
+
+      .select-items div {
+        padding: 0.5rem 1rem;
+        cursor: pointer;
+      }
+
+      .select-items div:hover,
+      .same-as-selected {
+        background-color: rgba(0, 0, 0, 0.1);
+      }
+
+      /* CSS cho checkbox tùy chỉnh */
+      .custom-checkbox {
+        display: inline-block;
+        position: relative;
+        padding-left: 25px;
+        cursor: pointer;
+        font-size: 14px;
+        user-select: none;
+      }
+
+      .custom-checkbox input {
+        position: absolute;
+        opacity: 0;
+        cursor: pointer;
+        height: 0;
+        width: 0;
+      }
+
+      .checkmark {
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 18px;
+        width: 18px;
+        background-color: #eee;
+        border-radius: 4px;
+      }
+
+      .custom-checkbox:hover input ~ .checkmark {
+        background-color: #ccc;
+      }
+
+      .custom-checkbox input:checked ~ .checkmark {
+        background-color: #cfaf8c; /* primary color */
+      }
+
+      .checkmark:after {
+        content: "";
+        position: absolute;
+        display: none;
+      }
+
+      .custom-checkbox input:checked ~ .checkmark:after {
+        display: block;
+      }
+
+      .custom-checkbox .checkmark:after {
+        left: 6px;
+        top: 2px;
+        width: 5px;
+        height: 10px;
+        border: solid white;
+        border-width: 0 2px 2px 0;
+        transform: rotate(45deg);
+      }
+
+      /* CSS cho Back to top button */
+      .back-to-top {
+        position: fixed;
+        bottom: 20px;
+        right: 20px;
+        opacity: 0;
+        visibility: hidden;
+        transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+      }
+
+      .back-to-top.visible {
+        opacity: 1;
+        visibility: visible;
+      }
+
+/* CSS cho phần hiển thị sản phẩm */
+.container2 {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); /* Ví dụ responsive grid */
+  gap: 24px; /* gap-6 Tailwind */
+  padding-top: 24px;
+}
+
+.product {
+  background-color: white;
+  border-radius: 8px;
+  box-shadow: 0 1px 3px rgba(0, 0, 0, 0.1);
+  padding: 16px;
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.product img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 4px;
+  margin-bottom: 12px;
+  cursor: pointer; /* Để gợi ý có thể click vào ảnh xem chi tiết */
+}
+
+.product h3 {
+  font-size: 1.125rem; /* text-lg */
+  font-weight: 600; /* font-semibold */
+  color: #374151; /* gray-800 */
+  margin-bottom: 8px;
+  cursor: pointer;
+}
+
+.product p {
+  font-size: 1rem; /* text-base */
+  color: #4b5563; /* gray-700 */
+  margin-bottom: 12px;
+}
+
+.product button {
+  background-color: #cfaf8c; /* primary */
+  color: white;
+  padding: 8px 16px;
+  border-radius: 8px; /* rounded-button */
+  font-weight: 500; /* font-medium */
+  transition: background-color 0.3s ease;
+}
+
+.product button:hover {
+  background-color: #8a7155; /* secondary */
+}
+
+/* (Duplicate custom-select, custom-checkbox, and back-to-top CSS removed to avoid redundancy and conflicts) */
+
+
+/* Custom scrollbar for mini cart (optional) */
+#mini-cart-items::-webkit-scrollbar {
+    width: 6px;
+}
+
+#mini-cart-items::-webkit-scrollbar-track {
+    background: #f1f1f1;
+    border-radius: 10px;
+}
+
+#mini-cart-items::-webkit-scrollbar-thumb {
+    background: #cfaf8c; /* Primary color */
+    border-radius: 10px;
+}
+
+#mini-cart-items::-webkit-scrollbar-thumb:hover {
+    background: #b89a7a; /* Darker primary color on hover */
+}
+
+/* For the Back to Top button visibility */
+.back-to-top {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.3s ease-in-out, visibility 0.3s ease-in-out;
+}
+
+.back-to-top.visible {
+    opacity: 1;
+    visibility: visible;
+}

@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Chính sách cửa hàng - Cocoon Việt Nam</title>
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            primary: '#cfaf8c',
+            secondary: '#cfaf8c',
+          },
+          borderRadius: {
+            'none': '0px',
+            'sm': '4px',
+            DEFAULT: '8px',
+            'md': '12px',
+            'lg': '16px',
+            'xl': '20px',
+            '2xl': '24px',
+            '3xl': '32px',
+            'full': '9999px',
+            'button': '8px',
+          }
+        }
+      }
+    }
+  </script>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Pacifico&display=swap" rel="stylesheet" />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;500;600;700&display=swap"
+    rel="stylesheet" />
+  <link href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.min.css" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+  <link rel="stylesheet" href="css/policy.css" />
+</head>
+
+<body class="bg-gray-50">
+  <!-- Nội dung trang web -->
+  <!-- Được giữ nguyên từ file gốc, sẽ được nối vào đây -->
+
+  <div class="scroll-progress" id="scrollProgress"></div>
+  <!-- Header -->f
+  <!-- Header -->
+  <header class="fixed top-0 left-0 right-0 bg-white shadow-sm z-50">
+    <div class="container mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center">
+
+        <!-- Logo -->
+        <a href="index.html" class="block w-[120px] md:w-[150px]">
+          <img src="images/cocoon.jpg" alt="Cocoon Việt Nam" class="w-full h-auto object-contain" />
+        </a>
+        <!-- Menu -->
+        <nav class="hidden md:flex space-x-10 ml-10">
+          <a href="sanpham.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Sản
+            phẩm</a>
+          <a href="news.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Tin tức</a>
+          <a href="about.html" class="text-gray-800 hover:text-primary relative hover-underline font-medium">Về chúng
+            tôi</a>
+          <a href="contact.html"
+            class="header-link text-gray-800 hover:text-primary relative hover-underline font-medium">Liên hệ</a>
+        </nav>
+
+        <!-- Search -->
+      </div>
+
+      <div class="flex items-center space-x-6">
+        <div class="relative">
+          <input type="text"
+            class="search-expand pl-10 pr-4 py-2 rounded-full bg-gray-100 focus:bg-white focus:outline-none"
+            placeholder="Tìm kiếm...">
+          <div
+            class="absolute left-3 top-1/2 transform -translate-y-1/2 w-5 h-5 flex items-center justify-center text-gray-500">
+            <i class="ri-search-line"></i>
+          </div>
+        </div>
+        <!-- Language Switch -->
+        <div class="language-switch">
+          <div class="flex items-center space-x-1 text-gray-700">
+            <span>VN</span>
+            <div class="w-4 h-4 flex items-center justify-center">
+              <i class="ri-arrow-down-s-line"></i>
+            </div>
+            <!-- Dropdown (optional) -->
+            <!-- <div class="language-options absolute mt-2 bg-white shadow p-2 rounded hidden">
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">Tiếng Việt</div>
+          <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm">English</div>
+        </div> -->
+          </div>
+          <div class="language-options p-2 w-24">
+            <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi"> VN</div>
+
+            <div class="py-1 px-2 hover:bg-gray-100 rounded text-sm text-[#000000] font-semi"> English </div>
+
+          </div>
+        </div>
+
+        <!-- Giỏ hàng -->
+        <a href="#" class="hidden md:flex items-center space-x-1 text-gray-700 hover:text-primary">
+          <div class="w-5 h-5 flex items-center justify-center">
+            <i class="ri-shopping-bag-line"></i>
+          </div>
+          <span class="font-medium cursor-pointer" onclick="toggleCart()">Giỏ hàng</span <!--start liên kết login.html
+            nè-->
+          <a href="login.html"
+            class="hidden md:block bg-gradient-to-r from-primary to-primary/80 text-white px-6 py-2 rounded-button hover:shadow-lg transition-all duration-300 whitespace-nowrap">Đăng
+            nhập</a>
+          <!--liên kết login.html nè end-->
+          <button class="md:hidden w-10 h-10 flex items-center justify-center text-gray-700" id="mobileMenuBtn">
+            <i class="ri-menu-line text-2xl"></i>
+          </button>
+      </div>
+    </div>
+    <div class="flex items-center justify-end space-x-4">
+
+    </div>
+    </div>
+  </header>
+  <!-- ✅ Đệm để tránh header đè -->
+  <div class="pt-24"></div>
+  <!-- Kết thúc header -->
+
+  <!-- Thân bài -->
+  <div class="policy-container" style="max-width:900px; margin:auto; background:#fff; padding:2.5rem 2rem; border-radius:16px; box-shadow:0 2px 16px 0 rgba(0,0,0,0.06); font-size:1.1rem;">
+    <h2 style="font-size:2rem; font-weight:700; margin-bottom:1.2em;">Chính Sách Giao Hàng & Đổi Trả</h2>
+    <div class="policy-note" style="margin-bottom:1.5em; font-size:1.05em;">
+      Cocoon Vietnam có dịch vụ giao hàng tận nơi trên toàn quốc, áp dụng cho khách mua hàng trên Website, Fanpage và gọi điện thoại vào Hotline của Cocoon. Đơn hàng sẽ được chuyển phát đến địa chỉ khách hàng cung cấp thông qua đơn vị vận chuyển trung gian là <b>GIAO HÀNG TIẾT KIỆM</b> hoặc <b>247EXPRESS</b>. Đặc biệt, thông tin hóa đơn dán bên ngoài kiện hàng luôn luôn có logo cô gái của thương hiệu để nhận biết các sản phẩm là chính hãng.
+    </div>
+    <div style="line-height:1.8;">
+      <div style="margin-bottom:1.5em;">
+        <b>1. Chính sách giá</b>
+        <div style="margin-left:1.5em; margin-top:0.5em;">
+          <b>a.</b> Giá sản phẩm niêm yết tại Website là giá đã bao gồm thuế theo quy định pháp luật hiện hành, phí đóng gói và các chi phí khác liên quan đến việc mua hàng trừ các chi phí phát sinh khác được xác nhận qua Hotline hoặc Email của Cocoon và được sự chấp thuận của khách hàng trong quá trình xác nhận đơn đặt hàng, giao nhận hàng hoá.
+        </div>
+      </div>
+      <div style="margin-bottom:1.5em;">
+        <b>2. Phí vận chuyển:</b>
+        <div style="margin-left:1.5em; margin-top:0.5em;">
+          <b>a.</b> Với hóa đơn từ <b>99.000 VNĐ</b>: miễn phí vận chuyển toàn quốc.<br>
+          <b>b.</b> Với hóa đơn dưới <b>99.000 VNĐ</b>: phí vận chuyển mặc định là <b>30.000 VNĐ</b> áp dụng toàn quốc.
+        </div>
+      </div>
+      <div style="margin-bottom:1.5em;">
+        <b>3. Thời gian giao hàng:</b>
+        <div style="margin-left:1.5em; margin-top:0.5em;">
+          <b>a.</b> Đơn hàng nội thành TP.HCM: Thời gian giao hàng là <b>2-3 ngày</b> sau khi đặt hàng.<br>
+          <b>b.</b> Đơn hàng ở ngoại thành TP.HCM và các tỉnh thành khác: Thời gian là <b>2-5 ngày</b> đối với khu vực trung tâm tỉnh thành phố và <b>5-6 ngày</b> đối với khu vực huyện, xã, thị trấn…<br>
+          <b>c.</b> Tuy nhiên, vẫn có những giới hạn và sự chậm trễ do nguyên nhân khách quan như lễ, tết, địa chỉ nhận hàng khó tìm, sự chậm trễ từ dịch vụ chuyển phát,…Cocoon mong quý khách thông cảm vì những lý do ngoài sự chi phối của chúng tôi.<br>
+          <b>d.</b> Trường hợp có sự chậm trễ khi giao hàng xảy ra, Cocoon sẽ thông báo ngay đến bạn đồng thời sẽ tiếp tục giao hàng hoặc hỗ trợ huỷ đơn hàng nếu bạn muốn. Chúng tôi sẽ không chịu trách nhiệm do việc giao hàng chậm trễ trừ trách nhiệm hoàn trả tiền nếu bạn đã thanh toán mà chưa nhận được sản phẩm.
+        </div>
+      </div>
+      <div style="margin-bottom:1.5em;">
+        <b>4. Quy trình giao nhận, đổi trả, bảo hành sản phẩm:</b>
+        <div style="margin-left:1.5em; margin-top:0.5em;">
+          <b>a.</b> Trong quá trình giao nhận hàng, nếu quý khách không có mặt trong đợt nhận hàng thì đơn vị vận chuyển sẽ liên lạc lại với quý khách để hẹn thời gian giao lại hàng (tối đa 2 lần hẹn). Sau 2 lần hẹn giao lại nhưng vẫn không giao thành công thì đơn vị vận chuyển sẽ hoàn hàng về cho Cocoon và chúng tôi sẽ hoàn trả các chi phí mà bạn đã thanh toán trong vòng 15 ngày làm việc.<br>
+          <b>b.</b> Trường hợp việc giao và nhận hàng không thành công do không thể liên lạc được với quý khách trong vòng 3 ngày, đơn vị vận chuyển sẽ hoàn hàng về lại cho Cocoon và chúng tôi sẽ thông báo đến bạn qua thông tin liên lạc mà bạn đã cung cấp về việc hủy đơn hàng đồng thời hoàn trả các chi phí mà bạn đã thanh toán trong vòng 15 ngày làm việc.<br>
+          <b>c.</b> Khi nhận sản phẩm, quý khách vui lòng kiểm tra kỹ tính nguyên vẹn, số lượng sản phẩm theo đơn đặt hàng trước khi nhận. Việc bạn ký xác nhận hoặc ảnh chụp nhận hàng của bạn do đơn vị vận chuyển thu thập trong quá trình giao nhận là chứng từ xác minh chúng tôi đã hoàn thành nghĩa vụ giao hàng đúng với đơn đặt hàng sau khi được bạn kiểm tra ngoại quan.<br>
+          <b>d.</b> Đơn vị vận chuyển có trách nhiệm giao hàng và thu thập các chứng từ trong quá trình giao nhận như chữ ký xác nhận hoặc ảnh chụp nhận hàng của khách hàng và lưu trữ theo quy định của pháp luật. Chúng tôi cam kết dùng mọi biện pháp nhằm bảo mật những chứng từ, hình ảnh chúng tôi thu thập của khách hàng và chỉ sử dụng cho mục đích lưu trữ, giải quyết khiếu nại, hỗ trợ khách hàng hoặc các mục đích được cho là đúng pháp luật và cần thiết mà không sử dụng cho mục đích thương mại hay vụ lợi khác.<br>
+          <b>e.</b> Quý khách cần quay lại video mở hàng và kiểm tra chất lượng sản phẩm để làm bằng chứng trong trường hợp muốn liên hệ lại với Cocoon nhằm đổi, trả, bảo hành sản phẩm hoặc khiếu nại các vấn đề liên quan đến sản phẩm mà bạn đã mua.<br>
+          <b>f.</b> Cocoon chỉ nhận đổi trả, bảo hành sản phẩm khi lỗi đến từ nhà sản xuất hoặc do quá trình vận chuyển. Chúng tôi sẽ liên lạc với bạn để hướng dẫn qui cách đóng gói hàng hoàn trả đồng thời thông báo đơn vị thu hồi và gửi sản phẩm tương đương để bổ sung, thay thế theo chính sách giao hàng quy định như trên tính từ ngày nhận được yêu cầu đổi trả, bảo hành sản phẩm, đồng thời chúng tôi sẽ chi trả chi phí vận chuyển cho việc đổi trả, bảo hành này. <b>Lưu ý</b>, chúng tôi chỉ hỗ trợ đổi trả hàng với điều kiện yêu cầu đổi trả không quá <b>03 ngày</b> kể từ ngày bạn nhận được hàng. Thời gian xử lý hoàn trả, bảo hành được thực hiện tối đa trong vòng <b>14 ngày</b> tính từ ngày nhận được yêu cầu của bạn.<br>
+          <b>g.</b> Đơn hàng của bạn sẽ được đóng gói theo tiêu chuẩn của Cocoon. Ngoài tiêu chuẩn gói hàng theo quy định, nếu bạn có nhu cầu đóng gói kiện hàng theo yêu cầu đặc biệt khác, vui lòng liên hệ với chúng tôi và chi trả thêm phí theo thoả thuận.<br>
+          <b>h.</b> Quý khách có thể thanh toán khi nhận hàng (COD) hoặc có thể chọn phương thức thanh toán trực tuyến qua cổng thanh toán Alepay hoặc Ví Momo theo hướng dẫn tại Mục “Hướng dẫn mua hàng” được công bố trên website.<br>
+          <b>i.</b> Mọi thông tin về việc thay đổi hay hủy bỏ đơn hàng, quý khách cần thông báo sớm để chúng tôi có thể hủy hoặc chỉnh sửa đơn hàng cho bạn kịp thời.<br>
+          <b>j.</b> Để kiểm tra mọi thông tin liên quan đến đơn hàng hoặc tình trạng đơn hàng của quý khách, xin vui lòng nhắn tin vào Fanpage, gửi Email hoặc gọi số Hotline và cung cấp tên, số điện thoại hoặc mã đơn hàng để được chúng tôi kiểm tra và hỗ trợ sớm nhất.
+        </div>
+      </div>
+      <div style="margin-bottom:1.5em;">
+        <b>5. Thông tin liên lạc</b>
+        <div style="margin-left:1.5em; margin-top:0.5em;">
+          Quý khách vui lòng liên hệ với chúng tôi trong trường hợp có thắc mắc, cần sự hỗ trợ và phản hồi qua các kênh sau:<br>
+          • Fanpage: <a href="https://www.facebook.com/CocoonVietnamOfficial" target="_blank">https://www.facebook.com/CocoonVietnamOfficial</a><br>
+          • Hotline: 028 38328228 (9:00-18:00 từ thứ 2 đến thứ 6)<br>
+          • Email: <a href="mailto:cskh@cocoonvietnam.com">cskh@cocoonvietnam.com</a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+  <!-- Footer -->
+  <footer class="bg-white pt-16 pb-8">
+    <div class="container mx-auto px-4">
+      <div class="grid grid-cols-1 md:grid-cols-4 gap-8 mb-12">
+        <div>
+          <a href="#" class="text-3xl font-['Pacifico'] text-primary mb-6 inline-block">Cocoon</a>
+          <p class="text-gray-600 mb-6">Mỹ phẩm thiên nhiên từ Việt Nam, mang đến vẻ đẹp thuần khiết và bền vững cho làn
+            da của bạn.</p>
+          <div class="flex space-x-4">
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-facebook-fill"></i>
+              </div>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-instagram-line"></i>
+              </div>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-youtube-line"></i>
+              </div>
+            </a>
+            <a href="#"
+              class="w-10 h-10 rounded-full bg-gray-100 flex items-center justify-center text-gray-600 hover:bg-primary hover:text-white transition-all duration-300">
+              <div class="w-5 h-5 flex items-center justify-center">
+                <i class="ri-tiktok-line"></i>
+              </div>
+            </a>
+          </div>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Sản phẩm</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc da mặt</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc cơ thể</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Chăm sóc tóc</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Sản phẩm mới</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Bộ sản phẩm</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Thông tin</h4>
+          <ul class="space-y-3">
+            <li><a href="#" class="text-gray-600 hover:text-primary">Về chúng tôi</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Tin tức & Bài viết</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Cửa hàng</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Tuyển dụng</a></li>
+            <li><a href="#" class="text-gray-600 hover:text-primary">Liên hệ</a></li>
+          </ul>
+        </div>
+        <div>
+          <h4 class="text-lg font-semibold mb-6">Liên hệ</h4>
+          <ul class="space-y-3">
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                <i class="ri-map-pin-line"></i>
+              </div>
+              <span class="text-gray-600">123 Nguyễn Huệ, Quận 1, TP. Hồ Chí Minh</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                <i class="ri-phone-line"></i>
+              </div>
+              <span class="text-gray-600">1900 1234 56</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                <i class="ri-mail-line"></i>
+              </div>
+              <span class="text-gray-600">info@cocoon.vn</span>
+            </li>
+            <li class="flex items-start">
+              <div class="w-5 h-5 flex items-center justify-center text-primary mr-3 mt-1">
+                <i class="ri-time-line"></i>
+              </div>
+              <span class="text-gray-600">Thứ 2 - Chủ nhật: 9:00 - 21:00</span>
+            </li>
+          </ul>
+        </div>
+      </div>
+      <div class="border-t border-gray-200 pt-8">
+        <div class="flex flex-col md:flex-row justify-between items-center">
+          <p class="text-gray-500 text-sm mb-4 md:mb-0">&copy; 2025 Cocoon Việt Nam. Tất cả quyền được bảo lưu.</p>
+          <div class="flex items-center space-x-6">
+            <a href="policy.html" class="text-gray-500 hover:text-primary text-sm">Chính sách cửa hàng</a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </footer>
+  
+  <!-- Back to top button -->
+  <button class="back-to-top w-12 h-12 rounded-full bg-primary text-white shadow-lg flex items-center justify-center"
+    id="backToTop">
+    <div class="w-6 h-6 flex items-center justify-center">
+      <i class="ri-arrow-up-line"></i>
+    </div>
+  </button>
+
+  <!-- Mobile Menu Script -->
+  <script id="mobileMenuScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const mobileMenuBtn = document.getElementById('mobileMenuBtn');
+      const mobileMenu = document.getElementById('mobileMenu');
+      mobileMenuBtn.addEventListener('click', function () {
+        if (mobileMenu.classList.contains('invisible')) {
+          mobileMenu.classList.remove('invisible', '-translate-y-full', 'opacity-0');
+          mobileMenu.classList.add('translate-y-0', 'opacity-100');
+          mobileMenuBtn.innerHTML = '<i class="ri-close-line text-2xl"></i>';
+        } else {
+          mobileMenu.classList.add('invisible', '-translate-y-full', 'opacity-0');
+          mobileMenu.classList.remove('translate-y-0', 'opacity-100');
+          mobileMenuBtn.innerHTML = '<i class="ri-menu-line text-2xl"></i>';
+        }
+      });
+    });
+  </script>
+  <!-- Product Tabs Script -->
+  <script id="productTabsScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const tabButtons = document.querySelectorAll('#productTabs .tab-button');
+      const tabContents = document.querySelectorAll('.tab-content');
+      tabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const tabId = this.getAttribute('data-tab');
+          // Remove active class from all buttons and contents
+          tabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+          tabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+          tabContents.forEach(content => content.classList.remove('active'));
+          // Add active class to current button and content
+          this.classList.add('active', 'bg-primary', 'text-white');
+          this.classList.remove('text-gray-700');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
+  <!-- Blog Tabs Script -->
+  <script id="blogTabsScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const blogTabButtons = document.querySelectorAll('#blogTabs .tab-button');
+      const blogTabContents = document.querySelectorAll('.tab-content');
+      blogTabButtons.forEach(button => {
+        button.addEventListener('click', function () {
+          const tabId = this.getAttribute('data-tab');
+          // Remove active class from all buttons and contents
+          blogTabButtons.forEach(btn => btn.classList.remove('active', 'bg-primary', 'text-white'));
+          blogTabButtons.forEach(btn => btn.classList.add('text-gray-700'));
+          blogTabContents.forEach(content => content.classList.remove('active'));
+          // Add active class to current button and content
+          this.classList.add('active', 'bg-primary', 'text-white');
+          this.classList.remove('text-gray-700');
+          document.getElementById(tabId).classList.add('active');
+        });
+      });
+    });
+  </script>
+  <!-- Login Modal Script -->
+  <script id="loginModalScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const loginButtons = document.querySelectorAll('a[href="#"]:not([id]):contains("Đăng nhập")');
+      const loginModal = document.getElementById('loginModal');
+      const closeLoginModal = document.getElementById('closeLoginModal');
+      function showLoginModal() {
+        loginModal.classList.remove('hidden');
+        document.body.style.overflow = 'hidden';
+      }
+      function hideLoginModal() {
+        loginModal.classList.add('hidden');
+        document.body.style.overflow = 'auto';
+      }
+      loginButtons.forEach(button => {
+        button.addEventListener('click', function (e) {
+          e.preventDefault();
+          showLoginModal();
+        });
+      });
+      if (closeLoginModal) {
+        closeLoginModal.addEventListener('click', hideLoginModal);
+      }
+      // Close modal when clicking outside
+      loginModal.addEventListener('click', function (e) {
+        if (e.target === loginModal) {
+          hideLoginModal();
+        }
+      });
+      // Close modal with Escape key
+      document.addEventListener('keydown', function (e) {
+        if (e.key === 'Escape' && !loginModal.classList.contains('hidden')) {
+          hideLoginModal();
+        }
+      });
+      // Handle form submission
+      const loginForm = loginModal.querySelector('form');
+      if (loginForm) {
+        loginForm.addEventListener('submit', function (e) {
+          e.preventDefault();
+          const email = document.getElementById('email').value;
+          const password = document.getElementById('password').value;
+          const remember = document.getElementById('remember').checked;
+          // Here you can add your login logic
+          console.log('Login attempt:', { email, password, remember });
+          // For demo purposes, show success message
+          hideLoginModal();
+        });
+      }
+    });
+  </script>
+  <!-- Scroll Progress Script -->
+  <script id="scrollProgressScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      const scrollProgress = document.getElementById('scrollProgress');
+      const backToTop = document.getElementById('backToTop');
+      window.addEventListener('scroll', function () {
+        const winScroll = document.body.scrollTop || document.documentElement.scrollTop;
+        const height = document.documentElement.scrollHeight - document.documentElement.clientHeight;
+        const scrolled = (winScroll / height) * 100;
+        if (scrollProgress) {
+          scrollProgress.style.width = scrolled + '%';
+        }
+        if (backToTop) {
+          if (winScroll > 300) {
+            backToTop.classList.add('visible');
+          } else {
+            backToTop.classList.remove('visible');
+          }
+        }
+      });
+      if (backToTop) {
+        backToTop.addEventListener('click', function () {
+          window.scrollTo({
+            top: 0,
+            behavior: 'smooth'
+          });
+        });
+      }
+    });
+  </script>
+  <!-- Animation Script -->
+  <script id="animationScript">
+    document.addEventListener('DOMContentLoaded', function () {
+      // Fade in elements when they come into view
+      const fadeElements = document.querySelectorAll('.fade-in');
+      const observer = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+          if (entry.isIntersecting) {
+            entry.target.style.opacity = '1';
+            entry.target.style.transform = 'translateY(0)';
+          }
+        });
+      }, {
+        threshold: 0.1
+      });
+      fadeElements.forEach(element => {
+        element.style.opacity = '0';
+        element.style.transform = 'translateY(20px)';
+        element.style.transition = 'opacity 0.5s ease, transform 0.5s ease';
+        observer.observe(element);
+      });
+    });
+  </script>
+  <script src="js/cart.js"></script>
+</body>
+
+</html>

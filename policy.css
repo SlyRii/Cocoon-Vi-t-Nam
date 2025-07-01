@@ -1,0 +1,65 @@
+        .policy-container {
+            background: #fff;
+            padding: 2em 2.2em;
+            border-radius: 14px;
+            box-shadow: 0 4px 18px rgba(0,0,0,0.07);
+            max-width: 600px;
+            margin: 0 auto 40px auto;
+            font-size: 1.08em;
+            color: #222;
+        }
+        .policy-container h2 {
+            color: #cfaf8c;
+            margin-bottom: 1.1em;
+            text-align: center;
+            letter-spacing: 1px;
+            font-size: 1.7em;
+            font-weight: 600;
+        }
+        .policy-note {
+            background: #f6fbe9;
+            border-left: 4px solid #79da56;
+            padding: 0.9em 1.2em;
+            border-radius: 7px;
+            margin-bottom: 1.3em;
+            font-size: 1em;
+            color: #4b7b2b;
+        }
+        .policy-container ul {
+            margin-left: 1.1em;
+            margin-bottom: 1.2em;
+            padding-left: 0;
+        }
+        .policy-container li {
+            margin-bottom: 0.8em;
+            line-height: 1.6;
+            position: relative;
+            padding-left: 1.4em;
+            list-style: none;
+        }
+        .policy-container li::before {
+            content: "•";
+            color: #cfaf8c;
+            position: absolute;
+            left: 0;
+            font-size: 1.2em;
+            top: 0.1em;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1.2em;
+            color: #cfaf8c;
+            text-decoration: none;
+            font-weight: 500;
+            transition: color 0.2s;
+            font-size: 1em;
+        }
+        .back-link:hover {
+            color: #79da56;
+            text-decoration: underline;
+        }
+        @media (max-width: 700px) {
+            .policy-container {
+                padding: 1.2em 0.5em;
+            }
+        }

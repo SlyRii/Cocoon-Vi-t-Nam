@@ -1,0 +1,31 @@
+
+    .container {
+        max-width: 960px; /* Giới hạn chiều rộng tối đa của nội dung */
+        margin: 10px auto; /* Căn giữa container và tạo khoảng cách trên dưới */
+        padding: 20px; /* Tạo khoảng đệm bên trong container */
+        background: white; /* Màu nền trắng cho container */
+        text-align: left;
+    line-height: 1.7; /* Tăng khoảng cách dòng cho dễ đọc */
+    color: #333; /* Màu chữ mặc định */
+    
+}
+    .container h1 {
+        color: #cfaf8c;
+        font-size: 1.5em;
+        text-align: center;
+        margin-bottom: 1em;
+    }
+
+    .container p {
+        color: #333;
+        font-size: 1.1em;
+        line-height: 1.5;
+        margin-bottom: 1em;
+    }
+
+    .section h2 {
+        color: #cfaf8c;
+        font-size: 1.2em;
+        margin-top: 1em;
+    }
+

@@ -1,0 +1,82 @@
+.review-container {
+            background: #fff;
+            padding: 2.5em 3em;
+            border-radius: 16px;
+            box-shadow: 0 8px 32px rgba(0, 0, 0, 0.10);
+            width: 95%;
+            max-width: 450px;
+            margin: 50px auto;
+            text-align: center;
+            font-family: Arial, sans-serif;
+        }
+        .review-container h2 {
+            color: #cfaf8c;
+            margin-bottom: 1em;
+            font-size: 2em;
+            letter-spacing: 1px;
+            font-family: Arial, sans-serif;
+        }
+        .review-container textarea, .review-container input[type="text"] {
+            width: 100%;
+            padding: 0.7em;
+            margin-bottom: 1em;
+            border: 1px solid #ccc;
+            border-radius: 6px;
+            font-size: 1em;
+            resize: vertical;
+            background: #f9f9f9;
+            font-family: Arial, sans-serif;
+        }
+        .review-container textarea:focus, .review-container input[type="text"]:focus {
+            outline: none;
+            border-color: #cfaf8c;
+            background: #fffbe9;
+        }
+        .review-container button {
+            width: 100%;
+            padding: 0.7em;
+            background: #cfaf8c;
+            color: #fff;
+            border: none;
+            border-radius: 6px;
+            font-size: 1em;
+            cursor: pointer;
+            transition: background 0.2s;
+            font-weight: bold;
+            letter-spacing: 1px;
+            font-family: Arial, sans-serif;
+        }
+        .review-container button:hover {
+            background: #79da56;
+            color: #222;
+        }
+        .review-success {
+            color: #cfaf8c;
+            margin-top: 1em;
+            font-size: 1.1em;
+            font-weight: bold;
+            animation: fadeIn 1s;
+            font-family: Arial, sans-serif;
+        }
+        .back-link {
+            display: inline-block;
+            margin-top: 1.5em;
+            color: #cfaf8c;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.2s;
+            font-family: Arial, sans-serif;
+        }
+        .back-link:hover {
+            color: #79da56;
+            text-decoration: underline;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px);}
+            to { opacity: 1; transform: translateY(0);}
+        }
+        @media (max-width: 600px) {
+            .review-container {
+                padding: 1.2em 0.5em;
+            }
+        }
